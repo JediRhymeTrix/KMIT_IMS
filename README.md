@@ -1,5 +1,5 @@
- # KMIT_IMS
- Project - an Inventory management System for KMIT.
+# KMIT_IMS Project
+-- an Inventory management System for KMIT.
  
 INSTRUCTIONS:
 
