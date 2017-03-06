@@ -33,4 +33,5 @@ NOTES:
  - In the system list, avoid all systems where the system number has a forward slash. Both JS and PHP are treating those strings as URLs and there isn't much we can do about it. (due to the lack of a 'raw string' format like in Python)
  - For the long-term thing, we will need to clean up all the data manually and ask them to establish a proper standard for recording the data like system number, peripheral's make, model, etc. The data they have given us is all over the place and frankly, useless in its current form.
  - The above reason is why we can only use generic part names like 'Monitor', 'Keyboard', 'Processor', etc. in the stockroom side for now. Once the data is made consistent and they start recording things like 'socket type', we can include all of the proper details.
+ - For testing 'maintenance view' in sysadmin/closed requests, either use request#48 or create a new request. Sending existing requests to 'closed' won't word because CPU numbers are read only when a new request is submitted.
  - Movement is incomplete. Management can initiate a movement request, which gets fed to the DB, but sysadmin's side needs to be built.
