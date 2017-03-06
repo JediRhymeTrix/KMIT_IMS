@@ -1,0 +1,697 @@
+@charset "utf-8";
+/* Global Styles */
+
+html, body { 
+  margin:0; 
+  padding:0; 
+  height:100%; 
+}
+
+a:link {
+	color: #E57B1C;
+}
+
+a:hover {
+    color: #027182;
+}
+a {
+	color: #E57B1C;
+}
+a, a:visited { color: #E57B1C;}
+/*header*/
+header {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(146,146,146,1.00);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+/* Logo placeholder*/
+.logo {
+    float: left;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 300px;
+    color: rgba(255,255,255,1.00);
+}
+
+.logo h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	color: #808080;
+	margin-top: 20px;
+	margin-left: 20px;
+	align: center;
+}
+.logo img {
+	padding-right: 0.5em;
+	border-right: 1px solid #808080;
+}
+
+/* div for Links in header */
+#headerLinks {
+    float: right;
+    width: calc( 50 );
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(255,255,255,1.00);
+}
+/* Links in header */
+#headerLinks a {
+    text-decoration: none;
+    color: rgba(146,146,146,1.00);
+    padding-left: 66px;
+    font-size: 14px;
+}
+/* Offer text banner*/
+#offer {
+    font-family: 'Montserrat', sans-serif;
+    clear: both;
+    background-color: rgba(246,246,246,1.00);
+    color: rgba(146,146,146,1.00);
+    padding-left: 115px;
+    padding-top: 57px;
+    padding-bottom: 57px;
+}
+/* Main content of the site */
+#content {
+    clear: both;
+    overflow: auto;
+    padding-top: 29px;
+}
+/* Sidebar */
+#content .sidebar {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(146,146,146,1.00);
+    float: left;
+    min-width: 15%;
+	max-width: 25%;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: center;
+    background-color: rgba(246,246,246,1.00);
+    padding-top: 36px;
+    min-height: 784px;
+	max-height: auto;
+}
+/* main content of the site */
+#content .mainContent {
+    float: left;
+    width: 70%;
+    text-align: center;
+    padding-left: 4%;
+}
+/*menubar's properties for menus in sidebar */
+#content .sidebar #menubar {
+    text-align: left;
+    color: rgba(146,146,146,1.00);
+    position: relative;
+    left: 0%;
+}
+/* Search field in sidebar */
+#content .sidebar #search {
+    width: 100%;
+    border-radius: 0px;
+    height: 42px;
+    text-align: center;
+    color: rgba(208,207,207,1.00);
+    font-size: 14px;
+;
+    margin-bottom: 21px;
+}
+ .name {
+	font-family: 'Montserrat', sans-serif;
+	 font-size: 18px;
+    color: rgba(146,146,146,1.00);
+}
+.name #username {
+	color: rgba(234,121,27,1.00);
+}
+/* Whole page content */
+#mainWrapper {
+    width: 95%;
+	margin-left: 2em;
+    padding-left: 2em;
+	padding-right: 2em;
+}
+/*menu elements */
+.menu ul li {
+    list-style-type: none;
+    font-size: x-large;
+    position: relative;
+    left: -35px;
+}
+/* Product rows for catalog */
+#content .mainContent .productRow {
+    overflow: auto;
+    color: rgba(146,146,146,1.00);
+}
+/* Each product Information in the catalog */
+.mainContent .productRow .productInfo {
+    float: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 22%;
+}
+/* Prices of a products in catalog */
+.productRow .productInfo .price {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(146,146,146,1.00);
+    font-size: 22px;
+    position: relative;
+    top: -20px;
+}
+/* Content holder for products in catalog*/
+.productRow .productInfo .productContent {
+    position: relative;
+    top: -37px;
+    font-size: 14px;
+    font-family: source-sans-pro, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    color: rgba(146,146,146,1.00);
+    white-space: pre-wrap;
+}
+/* Buy button for products in catalog */
+.productRow .productInfo .buyButton {
+    position: relative;
+    top: -48px;
+    width: 84%;
+    background-color: rgba(208,207,207,1.00);
+    height: 35px;
+    color: rgba(255,255,255,1.00);
+    border-style: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+
+
+table.parts_table {
+	border: 1px solid teal;
+	border-radius: 5px;
+	border-collapse:separate;
+}
+table.parts_table th {
+	padding:5px;
+	border:1px solid teal;
+	border-width:0 1px 1px 0;
+	text-align: center;
+}
+
+table.parts_table td {
+	padding:5px;
+	border:1px solid teal;
+	border-width:0 1px 1px 0;
+	text-align: center;
+}
+table.parts_table td.part_names {
+	padding:5px;
+	border:1px solid teal;
+	border-width:0 1px 1px 0;
+	text-align: justify;
+	text-transform: capitalize;
+}
+table.parts_table td.but button.maint_but {
+	margin:auto;
+  	display:block;
+}
+
+input[type="submit"] {
+	margin: 10px;
+	color: gray;
+	background-color: #F6F6F6;
+	display: block;
+	border-radius: 5px;
+	align-content: center;
+}
+input[type="submit"]:hover {
+	margin: 10px;
+	color: #EC7817;
+	background-color: #F6F6F6;
+	display: block;
+	border-radius: 5px;
+}
+
+input[type="button"] {
+	/margin: 10px;
+	color: gray;
+	background-color: #F6F6F6;
+	/border-radius: 5px;
+	float: right;
+	/position: relative;
+}
+input[type="button"]:hover {
+	/margin: 10px;
+	color: #EC7817;
+	background-color: #F6F6F6;
+	/border-radius: 5px;
+	float: right;
+	/position: relative;
+	
+}
+
+ #logs a:hover {
+	color: gray;
+}
+
+.maintenance a {
+	font-size: small;
+	color: grey;
+}
+.maintenance {
+	float: right;
+	padding-bottom: 10px;
+	display: inline-block;
+}
+
+.parts_form {
+	padding: 20px;
+	padding-right: 30px;
+	padding-top: 10px;
+	width: 100%;
+	text-align: left;
+}
+
+.parts_table {
+	width: 70%; 
+	margin: auto;
+	border: thick;
+}
+
+.parts td {
+	text-align: left;
+	align-content: center;
+	width: 10%;
+}
+.parts td .but{
+	text-align: left;
+	align-content: center;
+	display: block;
+}
+.parts th {
+	font-size: large;
+}
+.parts th .le {
+	text-align: left;
+}
+.parts th .ri {
+	text-align: right;
+}
+
+.maint_but {
+	border-radius: 5px;
+}
+
+.req_list {
+	display: block;
+	margin: 5px;
+}
+
+.system  {
+	align-content: left;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	color: #929295;
+	list-style-type: none;
+	text-align: left;
+	text-decoration: none;
+	
+	background-color: #F6F6F6;
+	margin: 10px;
+	border-radius: 5px;
+	padding: 5px;
+	box-shadow: 2px 2px 5px #888888;
+	overflow: visible;
+}
+
+.not_active a{
+	text-decoration: none;
+	color: #929292;
+}
+
+.not_active a:hover {
+	text-decoration: none;
+	color: #EC7817;
+}
+
+.not_active a:active {
+	box-shadow: 0px 0px 2px #888888;
+}
+
+ .not_active a:focus {
+	color: #EC7817;
+}
+
+.req_id{
+	text-decoration: none;
+	color: #929292;
+}
+
+.req_id:hover {
+	text-decoration: none;
+	color: #EC7817;
+}
+
+.req_id:active {
+	box-shadow: 0px 0px 2px #888888;
+}
+
+ .req_id:focus {
+	color: #EC7817;
+}
+
+.parts #selected{
+	height: 200px;
+}
+
+.parts {
+	width: 100%;
+}
+
+label {
+	padding: 5px;
+	color: #989898;
+	z-index: 10000;
+}
+label:hover {
+	padding: 5px;
+	color: #6C6C6C;
+	z-index: 10000;
+}
+	#movement_form input, text, date, time, select {
+		text-align: left;
+		border: 1px solid #ccc;
+    	border-radius: 5px;
+	}
+
+.logs_label {
+	color: rgba(146,146,146,1.00);
+    text-decoration: none;
+    height: auto;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: light;
+}
+
+#partnames {
+	color: #007C8F;
+	z-index: 10000;
+}
+
+#stock {
+	text-transform: capitalize;
+}
+#restock {
+	text-transform: capitalize;
+}
+#restock_sub {
+	padding-top: 20px;
+}
+.restock_qty {
+	margin-left: 10px;
+}
+
+/* footer */
+#mainWrapper footer {
+    clear: both;
+    overflow: auto;
+    background-color: rgba(208,207,207,1.00);
+    font-family: source-sans-pro, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 1.8;
+    padding-top: 22px;
+    padding-left: 22px;
+    text-align: center;
+    padding-bottom: 22px;
+    padding-right: 22px;
+}
+/*Each footer content */
+#mainWrapper footer div {
+    width: 27%;
+    float: left;
+    padding-left: 4%;
+    padding-right: 2%;
+    color: rgba(255,255,255,1.00);
+    text-align: justify;
+}
+/* Links in footer */
+footer div a {
+    color: rgba(146,146,146,1.00);
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+/* Product's images in catalog */
+.productInfo div img {
+    width: 100%;
+}
+/*Links in sidebar */
+.sidebar #menubar .menu ul li a {
+    color: rgba(146,146,146,1.00);
+    text-decoration: none;
+    height: auto;
+}
+.sidebar #menubar .menu ul li a:hover {
+    color: #E77109;
+    text-decoration: none;
+}
+.sidebar #menubar .menu ul li a:focus {
+    color: #E77109;
+    text-decoration: none;
+}
+
+#menubar {
+	height: auto;
+}
+
+/* Menu headings in sidebar */
+#menubar .menu h2 {
+    font-size: 14px;
+	padding-top: 15px;
+}
+/*Links under menus in sidebar */
+#menubar .menu ul li a {
+    font-size: 14px;
+}
+/* Menus in sidebar */
+.sidebar #menubar .menu {
+    margin-bottom: 29px;
+}
+.sidebar {
+    height: 100%;
+}
+/* Container for links in footer */
+footer .footerlinks {
+    margin-top: -15px;
+}
+
+/* Media query for tablets */
+@media screen and (max-width:700px) {
+    /* search field in sidebar */
+    #content .sidebar #search {
+        display: none;
+    }
+    /* sidebar */
+    #content .sidebar {
+        float: none;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        padding-left: 12%;
+        padding-top: 0px;
+    }
+    /* horizontal separators in sidebar */
+    #content .sidebar hr {
+        display: none;
+    }
+    /*The sidebar and maincontent of page */
+    #content {
+        position: relative;
+        top: -22px;
+        width: 100%;
+        overflow: hidden;
+    }
+    /*menu headings in sidebar */
+    #menubar .menu h2 {
+        display: inline;
+        font-size: medium;
+        padding-right: 6%;
+    }
+    /* Unordered List of links */
+    #menubar .menu ul {
+        display: inline;
+    }
+    /*list elements */
+    #menubar .menu ul li {
+        display: inline;
+        font-size: medium;
+        padding-left: 0%;
+        padding-right: 3%;
+    }
+    /*The link to be hidden in tablet view */
+    .sidebar #menubar .menu ul .notimp {
+        display: none;
+    }
+    /* menus in sidebar */
+    .sidebar #menubar .menu {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        top: 16px;
+    }
+    /*menubar in sidebar */
+    #content .sidebar #menubar {
+        position: relative;
+        left: -7%;
+        overflow: hidden;
+        width: 95%;
+        padding-top: 0px;
+    }
+    /* offer banners content */
+    #mainWrapper #offer p {
+        font-size: small;
+    }
+    /* main content region of page */
+    #mainWrapper #content .mainContent {
+        overflow: hidden;
+        width: 95%;
+        margin-top: 40px;
+    }
+    /* Prices of products in catalog view */
+    .productRow .productInfo .price {
+        font-size: 19px;
+    }
+    /* Content holders in catalog view */
+    .productRow .productInfo .productContent {
+        font-size: 16px;
+    }
+    /* Buy buttons in catalog view */
+    .productRow .productInfo .buyButton {
+        font-size: 15px;
+    }
+    /* Container for links in footer */
+    #mainWrapper footer .footerlinks {
+        float: none;
+        width: 100%;
+        position: relative;
+        top: 17px;
+        clear: both;
+        text-align: center;
+        left: 0%;
+        padding-bottom: 19px;
+    }
+    /* Container for each footer divisions */
+    #mainWrapper footer div {
+        width: 44%;
+        text-align: justify;
+        font-size: 15px;
+    }
+    /* Links in footer */
+    .footerlinks p a {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        display: inline;
+        padding-right: 35px;
+    }
+    /* Footer region */
+    #mainWrapper footer {
+        padding-left: 16px;
+        overflow: hidden;
+    }
+    /* Links in header */
+    header #headerLinks a {
+        padding-left: 0px;
+        padding-right: 2em;
+    }
+    /* Offer- Text banner */
+    #mainWrapper #offer {
+        padding-left: 22%;
+    }
+    /* Paragraphs in footer */
+    footer .footerlinks p {
+        display: inline;
+    }
+}
+
+/*media query for small screen devices */
+@media screen and (max-width:480px) {
+    /*Container for links in header */
+    #mainWrapper header #headerLinks {
+        width: 100%;
+        text-align: center;
+        background-color: rgba(190,190,190,1.00);
+        padding-bottom: 21px;
+    }
+    /* Logo placeholder*/
+    #mainWrapper header #logo {
+        width: 100%;
+        text-align: center;
+    }
+    /* Links in header */
+    header #headerLinks a {
+        text-align: center;
+        padding-right: 15px;
+        padding-left: 0px;
+    }
+    /*Offer - Text Banner */
+    #mainWrapper #offer {
+        padding-left: 0px;
+        text-align: center;
+    }
+    /* Menubar in sidebar */
+    #content .sidebar #menubar {
+        position: relative;
+        left: -8%;
+        text-align: center;
+    }
+    /*Menu headings in sidebar */
+    #menubar .menu h2 {
+        width: 100%;
+        display: block;
+    }
+    /* Each product in catalog view */
+    .mainContent .productRow .productInfo {
+        width: 100%;
+        display: block;
+        padding-left: 0px;
+        padding-right: 0px;
+        position: relative;
+        left: -2%;
+    }
+    #mainWrapper footer div {
+        width: 100%;
+        margin-left: -16px;
+        text-align: justify;
+        padding-bottom: 16px;
+        overflow: auto;
+    }
+    /* Unordered list for menu elements */
+    .menu ul {
+        position: relative;
+        padding-left: 24%;
+    }
+	
+	#stock ul .stock li {
+		font-size: 10px;
+	}
+	
+	input[type=number] {
+		color: darkorange;
+	}
+	
+    /* Container for links in footer */
+    #mainWrapper footer .footerlinks {
+        padding-left: 8%;
+    }
+    /* Main content which excludes the sidebar */
+    #mainwrapper #content .mainContent {
+        margin-top: -81px;
+        text-align: center;
+        width: 100%;
+        padding-left: 0px;
+    }
+}

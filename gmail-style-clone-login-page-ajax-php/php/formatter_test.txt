@@ -1,0 +1,133 @@
+Array
+(
+    [0] => Array
+        (
+            [req_id] => 3
+            [req_date] => 2015-10-10
+            [req_time] => 00:00:12
+            [lab_name] => FS6
+            [parts_inrepair] => Array
+                (
+                    [0] => motherboard
+                    [1] => Monitor
+                    [2] => processor
+                )
+
+            [quantity] => Array
+                (
+                    [motherboard] => 7
+                    [Monitor] => 1
+                    [processor] => 2
+                )
+
+            [status] => pending
+            [allotted] => Array
+                (
+                    [motherboard] => 0
+                    [Monitor] => 0
+                    [processor] => 0
+                )
+
+            [pending] => Array
+                (
+                    [motherboard] => 7
+                    [Monitor] => 1
+                    [processor] => 2
+                )
+
+            [parts_count] => 3
+            [maximums] => Array
+                (
+                    [motherboard] => 7
+                    [Monitor] => 1
+                    [processor] => 2
+                )
+
+            [stock] => Array
+                (
+                    [HDD] => 33
+                    [Keyboard] => 84
+                    [memory] => 70
+                    [Monitor] => 37
+                    [motherboard] => 30
+                    [Mouse] => 76
+                    [printer] => 30
+                    [processor] => 41
+                    [projector] => 6
+                    [server] => 2
+                    [xerox] => 5
+                )
+
+        )
+
+    [1] => Array
+        (
+            [req_id] => 13
+            [req_date] => 2017-02-08
+            [req_time] => 06:07:01
+            [lab_name] => FS6
+            [parts_inrepair] => Array
+                (
+                    [0] => motherboard
+                    [1] => processor
+                    [2] => memory
+                    [3] => HDD
+                    [4] => Monitor
+                )
+
+            [quantity] => Array
+                (
+                    [motherboard] => 1
+                    [processor] => 1
+                    [memory] => 0
+                    [HDD] => 0
+                    [Monitor] => 0
+                )
+
+            [status] => pending
+            [allotted] => Array
+                (
+                    [motherboard] => 0
+                    [processor] => 0
+                    [memory] => 0
+                    [HDD] => 0
+                    [Monitor] => 0
+                )
+
+            [pending] => Array
+                (
+                    [motherboard] => 1
+                    [processor] => 1
+                    [memory] => 0
+                    [HDD] => 0
+                    [Monitor] => 0
+                )
+
+            [parts_count] => 5
+            [maximums] => Array
+                (
+                    [motherboard] => 1
+                    [processor] => 1
+                    [memory] => 0
+                    [HDD] => 0
+                    [Monitor] => 0
+                )
+
+            [stock] => Array
+                (
+                    [HDD] => 33
+                    [Keyboard] => 84
+                    [memory] => 70
+                    [Monitor] => 37
+                    [motherboard] => 30
+                    [Mouse] => 76
+                    [printer] => 30
+                    [processor] => 41
+                    [projector] => 6
+                    [server] => 2
+                    [xerox] => 5
+                )
+
+        )
+
+)

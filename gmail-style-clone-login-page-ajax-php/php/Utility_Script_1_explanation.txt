@@ -1,0 +1,87 @@
+
+Write a function in PHP which takes an array as input, does all this and returns a modified array.
+
+
+Process the associative array in such a way:
+
+	Take the following element from the big array as an example (complete sample is available in "output.txt"):
+
+					Array
+			(
+			    [0] => Array
+			        (
+			            [req_id] => 3
+			            [req_date] => 2015-10-10
+			            [req_time] => 00:00:12
+			            [lab_name] => FS6
+			            [parts_inrepair] => motherboard,Monitor,processor
+			            [quantity] => 7,1,2
+			            [status] => pending
+			            [allotted] => 0,0,0
+			            [pending] => 7,1,2
+			            [parts_count] => 3
+			            [maximums] => Array
+			                (
+			                    [motherboard] => 7
+			                    [Monitor] => 1
+			                    [processor] => 2
+			                )
+
+			            [stock] => Array
+			                (
+			                    [HDD] => 33
+			                    [Keyboard] => 84
+			                    [memory] => 70
+			                    [Monitor] => 37
+			                    [motherboard] => 30
+			                    [Mouse] => 76
+			                    [printer] => 30
+			                    [processor] => 41
+			                    [projector] => 6
+			                    [server] => 2
+			                    [xerox] => 5
+			                )
+
+			        )
+			)
+
+
+			- Take the "parts_inrepair" key, extract it's value, which is a comma-seperated string. Convert it into an array consisting of one part's name in each index. 
+			- Take the "quantity" key, extract it's value, which is anothe comma-seperated string. Convert it into an associative array consisting of each part's name as key and it's corresponding quantity as the value.
+			- Do the same with "quantity", "allotted" and "pending".
+			- After processing, store the resultant associative arrays back in place of the comma-seperated strings.
+
+			Example: 
+
+				[parts_inrepair] => motherboard,Monitor,processor
+
+				will become:
+
+				[parts_inrepair] => Array
+					(
+						[0] => motherboard
+						[1] => Monitor
+						[2] => processor
+					)
+
+				OR
+
+
+				[quantity] => 7,1,2
+
+				will become:
+
+				[quantity] => Array
+					(
+						[motherboard] => 7
+						[Monitor] => 1
+						[keyboard] => 2
+					)
+
+				etc.
+
+	
+	The number of parts will keep changing, so keep that in mind. Also, don't change the naming scheme ANYWHERE, since, all of this data is coming from the DB and the names are standardized accross the application.
+	Make all changes happen in-place, which means, the new array created at every step gets mapped to the same key that was pointing to the String earlier.
+	Use unprint_r to convert the array dump in "output.txt" back into an array.
+
