@@ -42,6 +42,11 @@ $(document).ready(function() {
                 $('.lab').click(function () {
                     var lab = $(this).attr('id');
 
+                    $('#req').show();
+                    $('#status').show();
+                    $('#stock li').empty();
+                    $('#selections').hide();
+
                     $('.lab').css({"color": "#929292"});
                     $('.link').css({"color": "#929292"});
                     $('#' + lab).css({"color": "#ea7819"});
@@ -130,7 +135,7 @@ $(document).ready(function() {
             //$('#logs_form').submit();
 
             $.ajax({
-                    url: "../php/movement_logs.php",
+                    url: "../php/request_logs.php",
                     type: "POST",
                     data: { logs_form: stats },
                     dataType: "JSON",
