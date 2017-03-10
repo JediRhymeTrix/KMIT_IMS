@@ -10,6 +10,9 @@ session_start();
 
 $con = mysqli_connect('localhost', 'root', '', 'test');
 
+file_put_contents("request.txt", '');
+unlink("request.txt");
+
 if(isset($_SESSION['emp_id'])){
 
     if(isset($_COOKIE['lab'])) {
