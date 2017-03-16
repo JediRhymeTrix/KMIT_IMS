@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     $('#init_movement').css({"color": "#E57B1C"});
 
-    if(Cookies.get('role') != 'Management') {
+    if(Cookies.get('role') != 'Lab Coordinator') {
         $('#username').text('error');
         alert("Unauthorized Access!");
         window.location.href = "../index.html";
@@ -26,7 +26,7 @@ $(document).ready(function() {
         $('.link').css({"color": "#929292"});
 
         $.ajax({
-            url: "../php/mgmnt_dashboard.php",
+            url: "../php/admin_dashboard.php",
             type: "POST",
             dataType: "JSON",
             data: {action: 'test'},
@@ -51,8 +51,15 @@ $(document).ready(function() {
                 var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
 
                 $('#due_date').attr('min', date);
+                $('#due_date').attr('value', date);
                 $('#due_time').attr('min', time);
-
+                $('#due_time').attr('value', time);
+                $('#due_date').change(function () {
+                    if($('#due_date').val() == date)
+                        $('#due_time').attr('min', time);
+                    else
+                        $('#due_time').attr('min', '');
+                });
 
                 $('#movement_form').submit(function(e) {
 
@@ -62,15 +69,19 @@ $(document).ready(function() {
                         alert('Please select at least 1 system/monitor');
                     else
                     {
+                        var formData = $("#movement_form").serialize();
+
                         $.ajax({
-                            url: "../php/mgmnt_movement.php",
+                            url: "../php/admin_movement.php",
                             type: "POST",
-                            data: $("#movement_form").serialize().push('submit'),
+                            data: formData,
                             dataType: "JSON",
 
                             success: function (data) {
 
                                 alert('Movement initiated');
+
+                                location.reload();
 
                             },
                             error: function () {
