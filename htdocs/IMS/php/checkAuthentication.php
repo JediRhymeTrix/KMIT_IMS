@@ -36,7 +36,9 @@ if(isset($_POST['email'])&&(isset($_POST['password']))){
                     break;
                 case 'stockguy': $loc = 'pages/stockguy_dashboard.html';
                     break;
-                case 'mgmnt': $loc = 'pages/mgmnt_dashboard.html';
+                case 'mgmnt': $loc = 'pages/admin_dashboard.html';
+                    break;
+                case 'admin': $loc = 'pages/admin_dashboard.html';
                     break;
                 default: $loc="index.html";
                     break;
