@@ -7,6 +7,15 @@ html, body {
   height:100%; 
 }
 
+::selection {
+    background: rgba(229, 123, 28, 0.6); /* WebKit/Blink Browsers */
+    color: #027182;
+}
+::-moz-selection {
+    background: rgba(229, 123, 28, 0.6); /* Gecko Browsers */
+    color: #027182;
+}
+
 a:link {
 	color: #E57B1C;
 }
@@ -382,6 +391,12 @@ label:hover {
 	z-index: 10000;
 }
 	#movement_form input, text, date, time, select {
+		text-align: left;
+		border: 1px solid #ccc;
+    	border-radius: 5px;
+	}
+
+#logs_form input, text, date, time, select {
 		text-align: left;
 		border: 1px solid #ccc;
     	border-radius: 5px;
