@@ -9,6 +9,16 @@ body {
     font-family: Arial, sans-serif;
     color: gray;
 }
+
+::selection {
+    background: rgba(229, 123, 28, 0.6); /* WebKit/Blink Browsers */
+    color: #027182;
+}
+::-moz-selection {
+    background: rgba(229, 123, 28, 0.6); /* Gecko Browsers */
+    color: #027182;
+}
+
 .login-form {} .login-form > section img {
     margin-bottom: 20px;
 }
