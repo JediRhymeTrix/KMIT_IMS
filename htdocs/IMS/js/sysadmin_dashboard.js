@@ -161,4 +161,7 @@ $(document).ready(function() {
     });
 });
 
+$(function() {
+    $(".sidebar").jScroll({speed : 0});
+});
 
