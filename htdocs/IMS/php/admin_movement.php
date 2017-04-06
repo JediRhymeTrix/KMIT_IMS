@@ -21,7 +21,7 @@ if(isset($_POST['from_lab'])) {
     $time = $_POST['due_time'];
     $remarks = $_POST['remarks'];
 
-    $query = mysqli_query($con, "insert into movement (req_id, source_lab, dest_lab, no_of_systems, no_of_monitors, movement_date, movement_time, status, remarks) VALUES (0, '$src', '$dest', '$qty', '$qty', '$date', '$time', 'pending', '$remarks')");
+    $query = mysqli_query($con, "insert into movement (req_id, source_lab, dest_lab, no_of_systems, no_of_monitors, movement_date, movement_time, status, remarks, req_date) VALUES (0, '$src', '$dest', '$qty', '$qty', '$date', '$time', 'pending', '$remarks', NOW())");
 
     echo json_encode(array('result'=>'success'));
 }
