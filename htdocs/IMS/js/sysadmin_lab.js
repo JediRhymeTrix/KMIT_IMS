@@ -116,12 +116,14 @@ $(document).ready(function() {
                                                 dataType: "JSON",
                                                 success: function (data) {
 
-                                                    console.log("request submitted");
+                                                    //console.log("request submitted");
 
                                                 },
                                                 error: function () {
 
-                                                    console.log('request failed');
+                                                    //console.log('request failed');
+
+                                                    localStorage.setItem('alerted', '');
 
                                                 }
                                             });

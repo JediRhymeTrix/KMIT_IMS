@@ -6,11 +6,10 @@
  * Time: 2:06 AM
  */
 
-include "request_formatter.php";
-
 session_start();
 
-$con = mysqli_connect('localhost', 'root', '', 'test');
+include 'config.php';    //    connecting to database
+include "request_formatter.php";
 
 if(isset($_POST['status']) || isset($_POST['status1'])) {
     $status = $_POST['status'];

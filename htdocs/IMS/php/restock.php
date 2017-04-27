@@ -8,18 +8,14 @@
 
 session_start();
 
-$db_name="test";
-$username="root";
-$pwd="";
-$server_name="localhost";
-$conn=mysqli_connect($server_name,$username,$pwd,$db_name);
+include 'config.php';    //    connecting to database
 
 $restock = $_POST['restock_form'];
 
 foreach ($restock as $key => $value)
 {
     $qry = "update stock set quantity = quantity + $value where type='$key'";
-    mysqli_query($conn,$qry);
+    mysqli_query($con,$qry);
 }
 
 echo json_encode('done');

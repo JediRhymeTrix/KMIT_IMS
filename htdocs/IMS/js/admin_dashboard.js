@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     $('#init_movement').css({"color": "#E57B1C"});
 
-    if(Cookies.get('role') != 'Lab Manager') {
+    if(Cookies.get('role') != 'Administrator') {
         $('#username').text('error');
         alert("Unauthorized Access!");
         window.location.href = "../index.html";

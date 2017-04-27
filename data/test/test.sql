@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2017 at 07:37 AM
+-- Generation Time: Apr 27, 2017 at 03:01 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -173,7 +173,78 @@ INSERT INTO `maintenance` (`req_id`, `lab`, `cpu_no`, `parts`, `installed`, `sta
 (47, 'FS6', '259', 'motherboard,keyboard', '0,0', 'pending'),
 (47, 'FS6', '261', 'motherboard,keyboard,mouse', '0,0,0', 'pending'),
 (47, 'FS6', '263', 'keyboard', '0', 'pending'),
-(48, 'FS6', '259', 'motherboard,memory,HDD', '0,0,0', 'pending');
+(48, 'FS6', '259', 'motherboard,memory,HDD', '0,0,0', 'pending'),
+(49, 'FS6', '259', 'motherboard,processor,memory', '0,0,0', 'pending'),
+(49, 'FS6', '260', 'motherboard,processor,memory', '0,0,0', 'pending'),
+(49, 'FS6', '261', 'HDD,Monitor', '0,0', 'pending'),
+(49, 'FS6', '263', 'mouse', '0', 'pending'),
+(50, 'FS7', '1007', 'motherboard,keyboard', '0,0', 'pending'),
+(50, 'FS7', '1008', 'motherboard,keyboard,mouse', '0,0,0', 'pending'),
+(50, 'FS6', '259', 'motherboard,memory', '0,0', 'pending'),
+(50, 'FS6', '260', 'memory,mouse,Monitor', '0,0,0', 'pending'),
+(50, 'FS6', '261', 'motherboard', '0', 'pending'),
+(50, 'FS6', '263', '', '', 'pending'),
+(50, 'FS6', '264', 'motherboard', '0', 'pending'),
+(50, 'FS6', '279', 'motherboard,keyboard', '0,0', 'pending'),
+(51, 'FS7', '1007', 'motherboard,keyboard,mouse', '0,0,0', 'pending'),
+(51, 'FS7', '1008', 'motherboard,processor', '0,0', 'pending'),
+(51, 'FS7', '1009', 'motherboard,keyboard', '0,0', 'pending'),
+(51, 'FS6', '259', 'motherboard,memory', '0,0', 'pending'),
+(51, 'FS6', '260', 'mouse', '0', 'pending'),
+(51, 'FS6', '261', 'motherboard,memory', '0,0', 'pending'),
+(52, 'FS7', '1007', 'motherboard,processor,Monitor', '0,0,0', 'pending'),
+(52, 'FS7', '1008', 'motherboard,processor,Monitor', '0,0,0', 'pending'),
+(53, 'FS7', '1008', 'motherboard,Monitor', '0,0', 'pending'),
+(53, 'FS7', '1009', 'processor', '0', 'pending'),
+(54, 'FS6', '259', 'motherboard,memory', '0,0', 'pending'),
+(54, 'FS6', '260', 'motherboard,mouse', '0,0', 'pending'),
+(54, 'FS6', '261', 'mouse', '0', 'pending'),
+(55, 'FS6', '259', 'motherboard', '1', 'done'),
+(55, 'FS6', '260', 'motherboard,processor,memory', '1,1,1', 'done'),
+(55, 'FS6', '261', 'motherboard,memory,mouse', '1,1,1', 'done'),
+(55, 'FS6', '263', 'motherboard', '0', 'pending'),
+(55, 'FS6', '264', 'motherboard', '0', 'pending'),
+(55, 'FS6', '265', 'motherboard,mouse', '0,0', 'pending'),
+(56, 'FS6', '258', 'motherboard', '0', 'pending'),
+(56, 'FS6', '260', 'motherboard,memory,HDD', '0,0,0', 'pending'),
+(56, 'FS6', '261', 'memory,mouse', '0,0', 'pending'),
+(57, 'FS6', '258', 'motherboard,processor', '0,0', 'pending'),
+(57, 'FS6', '259', '', '', 'pending'),
+(57, 'FS6', '260', 'motherboard', '0', 'pending'),
+(58, 'FS6', '260', 'memory', '0', 'pending'),
+(58, 'FS6', '261', 'mouse', '0', 'pending'),
+(58, 'FS6', '264', 'motherboard,processor,HDD', '0,0,0', 'pending'),
+(59, 'FS6', '259', 'motherboard,memory', '0,0', 'pending'),
+(59, 'FS6', '260', 'motherboard,memory', '0,0', 'pending'),
+(59, 'FS6', '261', 'memory,mouse', '0,0', 'pending'),
+(60, 'FS6', '261', 'memory,HDD,mouse', '0,0,0', 'pending'),
+(60, 'FS6', '263', 'memory', '0', 'pending'),
+(61, 'FS6', '259', 'motherboard,memory', '0,0', 'pending'),
+(61, 'FS6', '260', 'motherboard,memory,mouse', '0,0,0', 'pending'),
+(61, 'FS6', '261', 'memory', '0', 'pending'),
+(62, 'FS6', '260', 'motherboard,memory', '0,0', 'pending'),
+(63, 'FS6', '261', 'motherboard', '0', 'pending'),
+(64, 'FS6', '263', 'mouse', '0', 'pending'),
+(65, 'FS6', '261', 'motherboard,memory', '0,0', 'pending'),
+(66, 'FS6', '263', 'motherboard,memory,mouse', '0,0,0', 'pending'),
+(67, 'FS6', '260', 'motherboard,memory', '0,0', 'pending'),
+(68, 'FS6', '261', 'memory,mouse,Monitor', '0,0,0', 'pending'),
+(69, 'FS6', '260', 'motherboard,memory', '0,0', 'pending'),
+(70, 'FS6', '261', 'memory,mouse', '0,0', 'pending'),
+(71, 'FS6', '263', 'motherboard,memory', '0,0', 'pending'),
+(72, 'FS6', '260', 'motherboard', '0', 'pending'),
+(73, 'FS6', '259', 'motherboard', '0', 'pending'),
+(74, 'FS6', '259', 'motherboard', '0', 'pending'),
+(74, 'FS6', '260', 'mouse', '0', 'pending'),
+(74, 'FS6', '261', 'motherboard,memory', '0,0', 'pending'),
+(74, 'FS6', '263', 'memory', '0', 'pending'),
+(75, 'FS6', '259', 'motherboard', '0', 'pending'),
+(76, 'FS6', '260', 'motherboard', '0', 'pending'),
+(77, 'FS6', '261', 'memory', '0', 'pending'),
+(78, 'FS6', '260', 'motherboard', '0', 'pending'),
+(79, 'FS6', '261', 'memory', '0', 'pending'),
+(80, 'FS6', '263', 'memory', '0', 'pending'),
+(81, 'FS6', '258', 'motherboard,memory,mouse', '0,0,0', 'pending');
 
 -- --------------------------------------------------------
 
@@ -235,15 +306,16 @@ CREATE TABLE `movement` (
   `movement_date` date DEFAULT NULL,
   `movement_time` time DEFAULT NULL,
   `status` enum('pending','active','closed') DEFAULT NULL,
-  `remarks` varchar(20000) DEFAULT NULL
+  `remarks` varchar(20000) DEFAULT NULL,
+  `req_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `movement`
 --
 
-INSERT INTO `movement` (`req_id`, `source_lab`, `dest_lab`, `no_of_systems`, `no_of_monitors`, `systems_list`, `monitors_list`, `movement_date`, `movement_time`, `status`, `remarks`) VALUES
-(2, 'FS6', 'FS7', 2, 2, NULL, NULL, '2017-03-05', '13:00:00', 'pending', 'xyz');
+INSERT INTO `movement` (`req_id`, `source_lab`, `dest_lab`, `no_of_systems`, `no_of_monitors`, `systems_list`, `monitors_list`, `movement_date`, `movement_time`, `status`, `remarks`, `req_date`) VALUES
+(2, 'FS6', 'FS7', 2, 2, NULL, NULL, '2017-03-05', '13:00:00', 'pending', 'xyz', '2017-03-05');
 
 -- --------------------------------------------------------
 
@@ -397,7 +469,36 @@ INSERT INTO `request` (`req_id`, `req_date`, `req_time`, `lab_name`, `parts_inre
 (42, '2017-02-27', '12:28:16', 'FS6', 'memory', '1', 'active', '1', '0'),
 (43, '2017-03-01', '22:44:51', 'FS6', 'motherboard,processor,memory,Keyboard,Mouse', '15,4,3,12,5', 'pending', '0,0,0,0,0', '15,4,3,12,5'),
 (47, '2017-03-02', '19:30:09', 'FS6', 'motherboard,Keyboard,Mouse', '3,4,2', 'pending', '0,0,0', '3,4,2'),
-(48, '2017-03-02', '23:20:14', 'FS6', 'motherboard,memory,HDD', '1,1,1', 'closed', '1,1,1', '0,0,0');
+(48, '2017-03-02', '23:20:14', 'FS6', 'motherboard,memory,HDD', '1,1,1', 'closed', '1,1,1', '0,0,0'),
+(53, '2017-03-10', '13:28:22', 'FS7', 'motherboard,processor,Monitor', '1,1,1', 'pending', '0,0,0', '1,1,1'),
+(54, '2017-04-06', '19:50:36', 'FS6', 'motherboard,processor,memory,Mouse', '3,1,1,1', 'pending', '0,0,0,0', '3,1,1,1'),
+(55, '2017-04-06', '19:51:53', 'FS6', 'motherboard,Mouse', '5,2', 'closed', '4,2', '1,0'),
+(56, '2017-04-27', '17:04:59', 'FS6', 'motherboard,memory,Mouse', '1,1,1', 'pending', '0,0,0', '1,1,1'),
+(57, '2017-04-27', '17:05:49', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
+(58, '2017-04-27', '17:07:12', 'FS6', 'memory,Mouse', '1,1', 'pending', '0,0', '1,1'),
+(59, '2017-04-27', '17:11:48', 'FS6', 'motherboard,memory,Mouse', '1,2,1', 'pending', '0,0,0', '1,2,1'),
+(60, '2017-04-27', '17:11:59', 'FS6', 'memory,HDD,Mouse', '2,1,1', 'pending', '0,0,0', '2,1,1'),
+(61, '2017-04-27', '17:19:12', 'FS6', 'motherboard,memory,Mouse', '2,3,1', 'pending', '0,0,0', '2,3,1'),
+(62, '2017-04-27', '17:19:18', 'FS6', 'motherboard,memory', '1,1', 'pending', '0,0', '1,1'),
+(63, '2017-04-27', '17:22:05', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
+(64, '2017-04-27', '17:22:08', 'FS6', 'Mouse', '1', 'pending', '0', '1'),
+(65, '2017-04-27', '17:25:51', 'FS6', 'motherboard,memory', '1,1', 'pending', '0,0', '1,1'),
+(66, '2017-04-27', '17:26:01', 'FS6', 'motherboard,memory,Mouse', '1,1,1', 'pending', '0,0,0', '1,1,1'),
+(67, '2017-04-27', '17:26:30', 'FS6', 'motherboard,memory', '1,1', 'pending', '0,0', '1,1'),
+(68, '2017-04-27', '17:26:35', 'FS6', 'memory,Monitor,Mouse', '1,1,1', 'pending', '0,0,0', '1,1,1'),
+(69, '2017-04-27', '17:29:27', 'FS6', 'motherboard,memory', '1,1', 'pending', '0,0', '1,1'),
+(70, '2017-04-27', '17:29:32', 'FS6', 'memory,Mouse', '1,1', 'pending', '0,0', '1,1'),
+(71, '2017-04-27', '17:29:38', 'FS6', 'motherboard,memory', '1,1', 'pending', '0,0', '1,1'),
+(72, '2017-04-27', '17:30:09', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
+(73, '2017-04-27', '17:30:12', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
+(74, '2017-04-27', '17:33:31', 'FS6', 'motherboard,memory', '2,1', 'pending', '0,0', '2,1'),
+(75, '2017-04-27', '17:35:24', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
+(76, '2017-04-27', '17:35:28', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
+(77, '2017-04-27', '17:36:35', 'FS6', 'memory', '1', 'pending', '0', '1'),
+(78, '2017-04-27', '17:37:11', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
+(79, '2017-04-27', '17:37:17', 'FS6', 'memory', '1', 'pending', '0', '1'),
+(80, '2017-04-27', '17:37:21', 'FS6', 'memory', '1', 'pending', '0', '1'),
+(81, '2017-04-27', '18:29:49', 'FS6', 'motherboard,memory,Mouse', '1,1,1', 'pending', '0,0,0', '1,1,1');
 
 -- --------------------------------------------------------
 
@@ -416,7 +517,7 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`role`, `role_name`, `image`) VALUES
-('admin', 'Administrator', 'admin.png'),
+('admin', 'Lab Manager', 'admin.png'),
 ('mgmnt', 'Management', 'mgmnt.png'),
 ('stockguy', 'Stock Room Staff', 'stockguy.png'),
 ('sysadmin', 'Network Engineer', 'sysadmin.png');
@@ -460,14 +561,14 @@ CREATE TABLE `stock` (
 --
 
 INSERT INTO `stock` (`type`, `quantity`) VALUES
-('HDD', 128),
-('Keyboard', 336),
-('memory', 276),
-('Monitor', 148),
-('motherboard', 108),
-('Mouse', 305),
+('HDD', 127),
+('Keyboard', 332),
+('memory', 274),
+('Monitor', 147),
+('motherboard', 67),
+('Mouse', 300),
 ('printer', 120),
-('processor', 164),
+('processor', 162),
 ('projector', 24),
 ('server', 9),
 ('xerox', 22);
@@ -2405,12 +2506,12 @@ ALTER TABLE `systemsinfs6parts`
 -- AUTO_INCREMENT for table `movement`
 --
 ALTER TABLE `movement`
-  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `request`
 --
 ALTER TABLE `request`
-  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

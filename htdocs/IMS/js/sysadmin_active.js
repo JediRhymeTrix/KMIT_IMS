@@ -40,6 +40,11 @@ $(document).ready(function() {
 
                 var c = 0;
 
+                if(data.length == 0)
+                    $("#mainContent").append('<h2 id="nothing2see" align="center" style="vertical-align: 50%; color: darkgrey; padding-top: 50px;">Nothing to see here!</h2>');
+                else
+                    $("#nothing2see").hide();
+
                 $.each(data, function (i, item) {
                     console.log(data[i].req_date);
                     //console.log(data);

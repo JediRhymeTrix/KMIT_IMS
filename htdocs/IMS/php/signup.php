@@ -9,7 +9,7 @@
 //include('config.php');
 
 
-$con = mysqli_connect('localhost', 'root', '', 'test');
+include 'config.php';    //    connecting to database
 
 if(isset($_POST['email'])&&(isset($_POST['pwd']))){
 

@@ -1,10 +1,5 @@
 <?php
-$db_name="test";
-$username="root";
-$pwd="";
-$server_name="localhost";
-$conn=mysqli_connect($server_name,$username,$pwd,$db_name);
-
+include "request_formatter.php";
 $value=1;
 $id=4;
 if($value==1)

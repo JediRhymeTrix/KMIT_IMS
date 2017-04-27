@@ -215,9 +215,9 @@ model</ColNames>
       <Position>11</Position>
       <DataType>varchar(20000)|0</DataType>
     </column>
-    <column id="64" parent="10" name="req_date">
+    <column id="64" parent="10" name="who">
       <Position>12</Position>
-      <DataType>date|0</DataType>
+      <DataType>varchar(50)|0</DataType>
     </column>
     <key id="65" parent="10" name="PRIMARY">
       <ColNames>req_id</ColNames>

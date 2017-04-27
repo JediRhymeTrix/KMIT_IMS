@@ -8,7 +8,9 @@
 
 session_start();
 
-$con = mysqli_connect('localhost', 'root', '', 'test');
+include 'config.php';    //    connecting to database
+
+unset($_SESSION['request']);
 
 file_put_contents("request.txt", '');
 unlink("request.txt");

@@ -36,10 +36,15 @@ $(document).ready(function() {
                 var labs = data.lab_names.split(',');
 
                 labs.forEach(function (item) {
-                    $("#labs").append("<li><a class='lab' id='" + item + "' href='../pages/labx.html' data-target='#mainContent' data-bjax>" + item + "</a></li>");
+                    $("#labs").append("<li><a class='lab' id='" + item + "' href='#' >" + item + "</a></li>");
                 });
 
-                $('.lab').click(function () {
+                $('.lab').click(function (e) {
+
+                    e.preventDefault();
+
+                    $('#mainContent').load('../pages/labx.html');
+
                     var lab = $(this).attr('id');
 
                     $('#req').show();

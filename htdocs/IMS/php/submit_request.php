@@ -10,9 +10,9 @@ session_start();
 
 //file_put_contents("request.txt", '');
 
-$con = mysqli_connect('localhost', 'root', '', 'test');
+include 'config.php';    //    connecting to database
 
-$cpu_no = $_POST['cpu_no'];
+$cpu_no = isset($_POST['cpu_no']) ? $_POST['cpu_no'] : '';
 
 unset($_POST['cpu_no']);
 
@@ -37,13 +37,19 @@ if( $out != 'submit')
 $out.=',';
 
 //$myfile = fopen("request.txt", "w");
-file_put_contents("request.txt", $out, FILE_APPEND | LOCK_EX);
+
+if(isset($_SESSION['request']))
+    $_SESSION['request'] .= $out;
+else
+    $_SESSION['request'] = $out;
+
+//file_put_contents("request.txt", $out, FILE_APPEND | LOCK_EX);
 
 echo json_encode(array("response"=>"k", "size"=>$size));
 
 if( isset($_POST['submit']) ) {
 
-    $str = file_get_contents('request.txt');
+    $str = $_SESSION[('request')];
 
     $lab = $_COOKIE['lab'];
 
@@ -87,6 +93,10 @@ if( isset($_POST['submit']) ) {
     }
     //file_put_contents('testfile.txt',$query);
 
-    file_put_contents("request.txt", '');
-    unlink("request.txt");
+    unset($_SESSION['request']);
+
+    echo json_encode(array("response"=>"k"));
+
+    /*file_put_contents("request.txt", '');
+    unlink("request.txt");*/
 }
