@@ -1,5 +1,7 @@
 # KMIT_IMS Project
 -- an Inventory management System for KMIT.
+
+Note: New live version hosted at: http://kmit-ims.byethost15.com
  
 INSTRUCTIONS:
 
