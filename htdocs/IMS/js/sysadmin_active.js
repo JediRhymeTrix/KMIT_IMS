@@ -58,6 +58,9 @@ $(document).ready(function() {
                     c++;
                 });
 
+                $('#loader').hide();
+                $('#mainContent').show(1000).slideDown();
+
                 console.log(c);
 
                 $('.req_button').click(function () {

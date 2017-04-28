@@ -104,7 +104,10 @@ $(document).ready(function() {
         e.preventDefault();
 
         $('#mainContent').hide();
-        $('#mainContent').show(1000).slideDown();
+        //$('#mainContent').show(1000).slideDown();
+
+        $('#loader').load("../pages/loader.html");
+        $('#loader').show();
 
         var stat = this.id;
 

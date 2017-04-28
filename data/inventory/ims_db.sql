@@ -1,23 +1,23 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 3.5.8.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 27, 2017 at 03:04 PM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 7.0.13
+-- Host: sql312.byethost15.com
+-- Generation Time: Apr 28, 2017 at 06:49 AM
+-- Server version: 5.6.35-81.0
+-- PHP Version: 5.3.3
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- Database: `ims_db`
+-- Database: `b15_20021784_inventory`
 --
 
 -- --------------------------------------------------------
@@ -26,11 +26,12 @@ SET time_zone = "+00:00";
 -- Table structure for table `hdd`
 --
 
-CREATE TABLE `hdd` (
+CREATE TABLE IF NOT EXISTS `hdd` (
   `make` varchar(30) NOT NULL DEFAULT '',
   `size` varchar(20) NOT NULL DEFAULT '',
-  `quantity` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `quantity` int(11) DEFAULT NULL,
+  PRIMARY KEY (`make`,`size`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `hdd`
@@ -47,12 +48,14 @@ INSERT INTO `hdd` (`make`, `size`, `quantity`) VALUES
 -- Table structure for table `login_table`
 --
 
-CREATE TABLE `login_table` (
+CREATE TABLE IF NOT EXISTS `login_table` (
   `email` varchar(50) NOT NULL,
   `userName` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
-  `role` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `role` varchar(10) NOT NULL,
+  PRIMARY KEY (`email`),
+  UNIQUE KEY `gmail_users_email_uindex` (`email`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `login_table`
@@ -78,11 +81,12 @@ INSERT INTO `login_table` (`email`, `userName`, `password`, `role`) VALUES
 -- Table structure for table `mac_addr_mobo`
 --
 
-CREATE TABLE `mac_addr_mobo` (
+CREATE TABLE IF NOT EXISTS `mac_addr_mobo` (
   `make` varchar(30) DEFAULT NULL,
   `model` varchar(30) DEFAULT NULL,
-  `mac_addr` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `mac_addr` varchar(50) NOT NULL,
+  PRIMARY KEY (`mac_addr`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `mac_addr_mobo`
@@ -156,95 +160,15 @@ INSERT INTO `mac_addr_mobo` (`make`, `model`, `mac_addr`) VALUES
 -- Table structure for table `maintenance`
 --
 
-CREATE TABLE `maintenance` (
+CREATE TABLE IF NOT EXISTS `maintenance` (
   `req_id` int(11) NOT NULL,
   `lab` varchar(20) NOT NULL,
   `cpu_no` varchar(20) NOT NULL,
   `parts` varchar(50) DEFAULT NULL,
   `installed` varchar(50) DEFAULT NULL,
-  `status` varchar(20) NOT NULL DEFAULT 'pending'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `maintenance`
---
-
-INSERT INTO `maintenance` (`req_id`, `lab`, `cpu_no`, `parts`, `installed`, `status`) VALUES
-(47, 'FS6', '259', 'motherboard,keyboard', '0,0', 'pending'),
-(47, 'FS6', '261', 'motherboard,keyboard,mouse', '0,0,0', 'pending'),
-(47, 'FS6', '263', 'keyboard', '0', 'pending'),
-(48, 'FS6', '259', 'motherboard,memory,HDD', '0,0,0', 'pending'),
-(49, 'FS6', '259', 'motherboard,processor,memory', '0,0,0', 'pending'),
-(49, 'FS6', '260', 'motherboard,processor,memory', '0,0,0', 'pending'),
-(49, 'FS6', '261', 'HDD,Monitor', '0,0', 'pending'),
-(49, 'FS6', '263', 'mouse', '0', 'pending'),
-(50, 'FS7', '1007', 'motherboard,keyboard', '0,0', 'pending'),
-(50, 'FS7', '1008', 'motherboard,keyboard,mouse', '0,0,0', 'pending'),
-(50, 'FS6', '259', 'motherboard,memory', '0,0', 'pending'),
-(50, 'FS6', '260', 'memory,mouse,Monitor', '0,0,0', 'pending'),
-(50, 'FS6', '261', 'motherboard', '0', 'pending'),
-(50, 'FS6', '263', '', '', 'pending'),
-(50, 'FS6', '264', 'motherboard', '0', 'pending'),
-(50, 'FS6', '279', 'motherboard,keyboard', '0,0', 'pending'),
-(51, 'FS7', '1007', 'motherboard,keyboard,mouse', '0,0,0', 'pending'),
-(51, 'FS7', '1008', 'motherboard,processor', '0,0', 'pending'),
-(51, 'FS7', '1009', 'motherboard,keyboard', '0,0', 'pending'),
-(51, 'FS6', '259', 'motherboard,memory', '0,0', 'pending'),
-(51, 'FS6', '260', 'mouse', '0', 'pending'),
-(51, 'FS6', '261', 'motherboard,memory', '0,0', 'pending'),
-(52, 'FS7', '1007', 'motherboard,processor,Monitor', '0,0,0', 'pending'),
-(52, 'FS7', '1008', 'motherboard,processor,Monitor', '0,0,0', 'pending'),
-(53, 'FS7', '1008', 'motherboard,Monitor', '0,0', 'pending'),
-(53, 'FS7', '1009', 'processor', '0', 'pending'),
-(54, 'FS6', '259', 'motherboard,memory', '0,0', 'pending'),
-(54, 'FS6', '260', 'motherboard,mouse', '0,0', 'pending'),
-(54, 'FS6', '261', 'mouse', '0', 'pending'),
-(55, 'FS6', '259', 'motherboard', '1', 'done'),
-(55, 'FS6', '260', 'motherboard,processor,memory', '1,1,1', 'done'),
-(55, 'FS6', '261', 'motherboard,memory,mouse', '1,1,1', 'done'),
-(55, 'FS6', '263', 'motherboard', '0', 'pending'),
-(55, 'FS6', '264', 'motherboard', '0', 'pending'),
-(55, 'FS6', '265', 'motherboard,mouse', '0,0', 'pending'),
-(56, 'FS6', '258', 'motherboard', '0', 'pending'),
-(56, 'FS6', '260', 'motherboard,memory,HDD', '0,0,0', 'pending'),
-(56, 'FS6', '261', 'memory,mouse', '0,0', 'pending'),
-(57, 'FS6', '258', 'motherboard,processor', '0,0', 'pending'),
-(57, 'FS6', '259', '', '', 'pending'),
-(57, 'FS6', '260', 'motherboard', '0', 'pending'),
-(58, 'FS6', '260', 'memory', '0', 'pending'),
-(58, 'FS6', '261', 'mouse', '0', 'pending'),
-(58, 'FS6', '264', 'motherboard,processor,HDD', '0,0,0', 'pending'),
-(59, 'FS6', '259', 'motherboard,memory', '0,0', 'pending'),
-(59, 'FS6', '260', 'motherboard,memory', '0,0', 'pending'),
-(59, 'FS6', '261', 'memory,mouse', '0,0', 'pending'),
-(60, 'FS6', '261', 'memory,HDD,mouse', '0,0,0', 'pending'),
-(60, 'FS6', '263', 'memory', '0', 'pending'),
-(61, 'FS6', '259', 'motherboard,memory', '0,0', 'pending'),
-(61, 'FS6', '260', 'motherboard,memory,mouse', '0,0,0', 'pending'),
-(61, 'FS6', '261', 'memory', '0', 'pending'),
-(62, 'FS6', '260', 'motherboard,memory', '0,0', 'pending'),
-(63, 'FS6', '261', 'motherboard', '0', 'pending'),
-(64, 'FS6', '263', 'mouse', '0', 'pending'),
-(65, 'FS6', '261', 'motherboard,memory', '0,0', 'pending'),
-(66, 'FS6', '263', 'motherboard,memory,mouse', '0,0,0', 'pending'),
-(67, 'FS6', '260', 'motherboard,memory', '0,0', 'pending'),
-(68, 'FS6', '261', 'memory,mouse,Monitor', '0,0,0', 'pending'),
-(69, 'FS6', '260', 'motherboard,memory', '0,0', 'pending'),
-(70, 'FS6', '261', 'memory,mouse', '0,0', 'pending'),
-(71, 'FS6', '263', 'motherboard,memory', '0,0', 'pending'),
-(72, 'FS6', '260', 'motherboard', '0', 'pending'),
-(73, 'FS6', '259', 'motherboard', '0', 'pending'),
-(74, 'FS6', '259', 'motherboard', '0', 'pending'),
-(74, 'FS6', '260', 'mouse', '0', 'pending'),
-(74, 'FS6', '261', 'motherboard,memory', '0,0', 'pending'),
-(74, 'FS6', '263', 'memory', '0', 'pending'),
-(75, 'FS6', '259', 'motherboard', '0', 'pending'),
-(76, 'FS6', '260', 'motherboard', '0', 'pending'),
-(77, 'FS6', '261', 'memory', '0', 'pending'),
-(78, 'FS6', '260', 'motherboard', '0', 'pending'),
-(79, 'FS6', '261', 'memory', '0', 'pending'),
-(80, 'FS6', '263', 'memory', '0', 'pending'),
-(81, 'FS6', '258', 'motherboard,memory,mouse', '0,0,0', 'pending');
+  `status` varchar(20) NOT NULL DEFAULT 'pending',
+  PRIMARY KEY (`req_id`,`cpu_no`,`lab`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -252,10 +176,11 @@ INSERT INTO `maintenance` (`req_id`, `lab`, `cpu_no`, `parts`, `installed`, `sta
 -- Table structure for table `monitor`
 --
 
-CREATE TABLE `monitor` (
+CREATE TABLE IF NOT EXISTS `monitor` (
   `make` varchar(30) NOT NULL,
-  `quantity` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `quantity` int(11) DEFAULT NULL,
+  PRIMARY KEY (`make`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `monitor`
@@ -272,12 +197,13 @@ INSERT INTO `monitor` (`make`, `quantity`) VALUES
 -- Table structure for table `motherboard`
 --
 
-CREATE TABLE `motherboard` (
+CREATE TABLE IF NOT EXISTS `motherboard` (
   `make` varchar(30) NOT NULL DEFAULT '',
   `model` varchar(30) NOT NULL DEFAULT '',
   `socket` varchar(30) DEFAULT NULL,
-  `quantity` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `quantity` int(11) DEFAULT NULL,
+  PRIMARY KEY (`make`,`model`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `motherboard`
@@ -295,8 +221,8 @@ INSERT INTO `motherboard` (`make`, `model`, `socket`, `quantity`) VALUES
 -- Table structure for table `movement`
 --
 
-CREATE TABLE `movement` (
-  `req_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `movement` (
+  `req_id` int(11) NOT NULL AUTO_INCREMENT,
   `source_lab` varchar(10) DEFAULT NULL,
   `dest_lab` varchar(10) DEFAULT NULL,
   `no_of_systems` int(11) DEFAULT NULL,
@@ -307,8 +233,9 @@ CREATE TABLE `movement` (
   `movement_time` time DEFAULT NULL,
   `status` enum('pending','active','closed') DEFAULT NULL,
   `remarks` varchar(20000) DEFAULT NULL,
-  `req_date` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `req_date` date DEFAULT NULL,
+  PRIMARY KEY (`req_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 -- --------------------------------------------------------
 
@@ -316,11 +243,12 @@ CREATE TABLE `movement` (
 -- Table structure for table `peripherals`
 --
 
-CREATE TABLE `peripherals` (
+CREATE TABLE IF NOT EXISTS `peripherals` (
   `sub_type` varchar(30) NOT NULL DEFAULT '',
   `make` varchar(30) NOT NULL DEFAULT '',
-  `quantity` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `quantity` int(11) DEFAULT NULL,
+  PRIMARY KEY (`sub_type`,`make`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `peripherals`
@@ -338,13 +266,14 @@ INSERT INTO `peripherals` (`sub_type`, `make`, `quantity`) VALUES
 -- Table structure for table `personnel`
 --
 
-CREATE TABLE `personnel` (
+CREATE TABLE IF NOT EXISTS `personnel` (
   `pid` varchar(50) NOT NULL,
   `pname` varchar(30) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `role` varchar(30) DEFAULT NULL,
-  `phone` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `phone` int(11) DEFAULT NULL,
+  PRIMARY KEY (`pid`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `personnel`
@@ -370,12 +299,13 @@ INSERT INTO `personnel` (`pid`, `pname`, `email`, `role`, `phone`) VALUES
 -- Table structure for table `processor`
 --
 
-CREATE TABLE `processor` (
+CREATE TABLE IF NOT EXISTS `processor` (
   `make` varchar(30) NOT NULL DEFAULT '',
   `frequency` varchar(20) NOT NULL DEFAULT '',
   `socket` varchar(30) DEFAULT NULL,
-  `quantity` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `quantity` int(11) DEFAULT NULL,
+  PRIMARY KEY (`make`,`frequency`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `processor`
@@ -392,11 +322,12 @@ INSERT INTO `processor` (`make`, `frequency`, `socket`, `quantity`) VALUES
 -- Table structure for table `ram`
 --
 
-CREATE TABLE `ram` (
+CREATE TABLE IF NOT EXISTS `ram` (
   `make` varchar(30) NOT NULL DEFAULT '',
   `size` varchar(20) NOT NULL DEFAULT '',
-  `quantity` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `quantity` int(11) DEFAULT NULL,
+  PRIMARY KEY (`make`,`size`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `ram`
@@ -413,8 +344,8 @@ INSERT INTO `ram` (`make`, `size`, `quantity`) VALUES
 -- Table structure for table `request`
 --
 
-CREATE TABLE `request` (
-  `req_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `request` (
+  `req_id` int(11) NOT NULL AUTO_INCREMENT,
   `req_date` date DEFAULT NULL,
   `req_time` time DEFAULT NULL,
   `lab_name` varchar(10) DEFAULT NULL,
@@ -422,76 +353,9 @@ CREATE TABLE `request` (
   `quantity` varchar(20) DEFAULT NULL,
   `status` varchar(20) DEFAULT NULL,
   `allotted` varchar(20) DEFAULT NULL,
-  `pending` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `request`
---
-
-INSERT INTO `request` (`req_id`, `req_date`, `req_time`, `lab_name`, `parts_inrepair`, `quantity`, `status`, `allotted`, `pending`) VALUES
-(1, '2016-08-14', '00:00:10', 'FS6', 'motherboard,Monitor,processor', '3,5,7', 'active', '0,0,0', '3,5,7'),
-(2, '2016-02-14', '00:00:02', 'FS6', 'motherboard,Monitor,processor', '6,9,8', 'active', '0,0,0', '6,9,8'),
-(3, '2015-10-10', '00:00:12', 'FS6', 'motherboard,Monitor,processor', '7,1,2', 'pending', '0,0,0', '7,1,2'),
-(11, '2017-02-07', '20:19:06', 'FS6', 'motherboard,processor,memory,HDD,Monitor', '1,0,0,0,0', 'closed', '0,0,0,0,0', '1,0,0,0,0'),
-(12, '2017-02-07', '20:19:06', 'FS6', 'motherboard,processor,memory,HDD,Monitor', '1,0,0,0,0', 'closed', '0,0,0,0,0', '1,0,0,0,0'),
-(13, '2017-02-08', '06:07:01', 'FS6', 'motherboard,processor,memory,HDD,Monitor', '1,1,0,0,0', 'pending', '0,0,0,0,0', '1,1,0,0,0'),
-(14, '2017-02-08', '07:27:35', 'FS6', 'motherboard,processor,memory,HDD,Monitor', '2,2,1,1,0', 'pending', '0,0,0,0,0', '2,2,1,1,0'),
-(16, '2017-02-08', '07:31:14', 'FS6', 'motherboard,processor,memory,HDD,Monitor', '3,3,0,1,1', 'pending', '0,0,0,0,0', '3,3,0,1,1'),
-(19, '2017-02-08', '07:37:38', 'FS6', 'motherboard,processor,memory,HDD,Monitor', '2,2,1,0,0', 'pending', '0,0,0,0,0', '2,2,1,0,0'),
-(20, '2017-02-17', '17:43:03', 'FS6', 'motherboard,processor,memory,HDD,Monitor', '3,0,0,0,0', 'pending', '0,0,0,0,0', '3,0,0,0,0'),
-(21, '2017-02-17', '17:43:25', 'FS6', 'motherboard,processor,memory,HDD,Monitor', '1,0,0,0,0', 'pending', '0,0,0,0,0', '1,0,0,0,0'),
-(22, '2017-02-17', '17:43:31', 'FS6', 'motherboard,processor,memory,HDD,Monitor', '1,1,0,0,0', 'pending', '0,0,0,0,0', '1,1,0,0,0'),
-(23, '2017-02-17', '17:44:03', 'FS6', 'motherboard,processor,memory,HDD,Monitor', '1,0,0,0,0', 'pending', '0,0,0,0,0', '1,0,0,0,0'),
-(24, '2017-02-17', '17:44:11', 'FS6', 'motherboard,processor,memory,HDD,Monitor', '1,0,1,0,0', 'pending', '0,0,0,0,0', '1,0,1,0,0'),
-(25, '2017-02-17', '17:44:52', 'FS6', 'motherboard,processor,memory,HDD,Monitor', '0,0,0,1,1', 'pending', '0,0,0,0,0', '0,0,0,1,1'),
-(26, '2017-02-25', '15:11:45', 'FS6', 'motherboard,processor,memory,HDD,Monitor', '1,0,0,1,0', 'pending', '0,0,0,0,0', '1,0,0,1,0'),
-(27, '2017-02-25', '15:17:13', 'FS6', 'motherboard,processor,memory,HDD,Monitor,Keyboard,Mouse', '0,0,0,0,1,0,0', 'pending', '0,0,0,0,0,0,0', '0,0,0,0,1,0,0'),
-(28, '2017-02-26', '08:27:20', 'FS6', 'motherboard,processor,memory,HDD,Monitor,Keyboard,Mouse', '5,5,1,0,0,0,0', 'pending', '0,0,0,0,0,0,0', '5,5,1,0,0,0,0'),
-(29, '2017-02-26', '08:30:29', 'FS6', 'motherboard,processor,memory,HDD,Monitor,Keyboard,Mouse', '0,0,2,0,0,0,0', 'pending', '0,0,0,0,0,0,0', '0,0,2,0,0,0,0'),
-(30, '2017-02-26', '08:31:39', 'FS6', 'motherboard,processor,memory,HDD,Monitor,Keyboard,Mouse', '2,0,2,0,0,0,0', 'pending', '0,0,0,0,0,0,0', '2,0,2,0,0,0,0'),
-(31, '2017-02-26', '08:32:18', 'FS6', 'motherboard,memory', '2,2', 'pending', '0,0', '2,2'),
-(33, '2017-02-26', '08:47:26', 'FS6', 'motherboard,processor,memory,HDD', '7,3,4,2', 'pending', '0,0,0,0', '7,3,4,2'),
-(35, '2017-02-26', '08:50:59', 'FS6', 'motherboard,memory,HDD', '1,1,1', 'pending', '0,0,0', '1,1,1'),
-(36, '2017-02-26', '08:53:23', 'FS6', 'motherboard,processor,memory', '1,1,1', 'pending', '0,0,0', '1,1,1'),
-(37, '2017-02-26', '08:54:54', 'FS6', 'motherboard,processor,memory,HDD,Monitor,Keyboard,Mouse', '2,2,2,1,1,2,1', 'pending\r\n', '0,0,0,0,0,0,0', '2,2,2,1,1,2,1'),
-(38, '2017-02-27', '06:53:39', 'FS7', 'motherboard,processor,memory,HDD,Monitor,Keyboard,Mouse', '1,1,1,2,2,2,1', 'incomplete', '1,0,0,0,0,0,0', '0,1,1,2,2,2,1'),
-(39, '2017-02-27', '07:53:22', 'FS6', 'memory,HDD,Monitor,Keyboard,Mouse', '1,2,1,1,1', 'pending', '0,0,0,0,0', '1,2,1,1,1'),
-(40, '2017-02-27', '07:53:35', 'FS7', 'motherboard,Keyboard,Mouse', '1,1,1', 'incomplete', '1,0,1', '0,1,0'),
-(41, '2017-02-27', '07:57:32', 'FS6', 'motherboard', '1', 'active', '1', '0'),
-(42, '2017-02-27', '12:28:16', 'FS6', 'memory', '1', 'active', '1', '0'),
-(43, '2017-03-01', '22:44:51', 'FS6', 'motherboard,processor,memory,Keyboard,Mouse', '15,4,3,12,5', 'pending', '0,0,0,0,0', '15,4,3,12,5'),
-(47, '2017-03-02', '19:30:09', 'FS6', 'motherboard,Keyboard,Mouse', '3,4,2', 'pending', '0,0,0', '3,4,2'),
-(48, '2017-03-02', '23:20:14', 'FS6', 'motherboard,memory,HDD', '1,1,1', 'closed', '1,1,1', '0,0,0'),
-(53, '2017-03-10', '13:28:22', 'FS7', 'motherboard,processor,Monitor', '1,1,1', 'pending', '0,0,0', '1,1,1'),
-(54, '2017-04-06', '19:50:36', 'FS6', 'motherboard,processor,memory,Mouse', '3,1,1,1', 'pending', '0,0,0,0', '3,1,1,1'),
-(55, '2017-04-06', '19:51:53', 'FS6', 'motherboard,Mouse', '5,2', 'closed', '4,2', '1,0'),
-(56, '2017-04-27', '17:04:59', 'FS6', 'motherboard,memory,Mouse', '1,1,1', 'pending', '0,0,0', '1,1,1'),
-(57, '2017-04-27', '17:05:49', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
-(58, '2017-04-27', '17:07:12', 'FS6', 'memory,Mouse', '1,1', 'pending', '0,0', '1,1'),
-(59, '2017-04-27', '17:11:48', 'FS6', 'motherboard,memory,Mouse', '1,2,1', 'pending', '0,0,0', '1,2,1'),
-(60, '2017-04-27', '17:11:59', 'FS6', 'memory,HDD,Mouse', '2,1,1', 'pending', '0,0,0', '2,1,1'),
-(61, '2017-04-27', '17:19:12', 'FS6', 'motherboard,memory,Mouse', '2,3,1', 'pending', '0,0,0', '2,3,1'),
-(62, '2017-04-27', '17:19:18', 'FS6', 'motherboard,memory', '1,1', 'pending', '0,0', '1,1'),
-(63, '2017-04-27', '17:22:05', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
-(64, '2017-04-27', '17:22:08', 'FS6', 'Mouse', '1', 'pending', '0', '1'),
-(65, '2017-04-27', '17:25:51', 'FS6', 'motherboard,memory', '1,1', 'pending', '0,0', '1,1'),
-(66, '2017-04-27', '17:26:01', 'FS6', 'motherboard,memory,Mouse', '1,1,1', 'pending', '0,0,0', '1,1,1'),
-(67, '2017-04-27', '17:26:30', 'FS6', 'motherboard,memory', '1,1', 'pending', '0,0', '1,1'),
-(68, '2017-04-27', '17:26:35', 'FS6', 'memory,Monitor,Mouse', '1,1,1', 'pending', '0,0,0', '1,1,1'),
-(69, '2017-04-27', '17:29:27', 'FS6', 'motherboard,memory', '1,1', 'pending', '0,0', '1,1'),
-(70, '2017-04-27', '17:29:32', 'FS6', 'memory,Mouse', '1,1', 'pending', '0,0', '1,1'),
-(71, '2017-04-27', '17:29:38', 'FS6', 'motherboard,memory', '1,1', 'pending', '0,0', '1,1'),
-(72, '2017-04-27', '17:30:09', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
-(73, '2017-04-27', '17:30:12', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
-(74, '2017-04-27', '17:33:31', 'FS6', 'motherboard,memory', '2,1', 'pending', '0,0', '2,1'),
-(75, '2017-04-27', '17:35:24', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
-(76, '2017-04-27', '17:35:28', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
-(77, '2017-04-27', '17:36:35', 'FS6', 'memory', '1', 'pending', '0', '1'),
-(78, '2017-04-27', '17:37:11', 'FS6', 'motherboard', '1', 'pending', '0', '1'),
-(79, '2017-04-27', '17:37:17', 'FS6', 'memory', '1', 'pending', '0', '1'),
-(80, '2017-04-27', '17:37:21', 'FS6', 'memory', '1', 'pending', '0', '1'),
-(81, '2017-04-27', '18:29:49', 'FS6', 'motherboard,memory,Mouse', '1,1,1', 'pending', '0,0,0', '1,1,1');
+  `pending` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`req_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -499,11 +363,13 @@ INSERT INTO `request` (`req_id`, `req_date`, `req_time`, `lab_name`, `parts_inre
 -- Table structure for table `roles`
 --
 
-CREATE TABLE `roles` (
+CREATE TABLE IF NOT EXISTS `roles` (
   `role` varchar(30) NOT NULL,
   `role_name` varchar(30) DEFAULT NULL,
-  `image` varchar(50) DEFAULT 'user.png'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `image` varchar(50) DEFAULT 'user.png',
+  PRIMARY KEY (`role`),
+  UNIQUE KEY `roles_role_uindex` (`role`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `roles`
@@ -521,12 +387,13 @@ INSERT INTO `roles` (`role`, `role_name`, `image`) VALUES
 -- Table structure for table `sharedperipherals`
 --
 
-CREATE TABLE `sharedperipherals` (
+CREATE TABLE IF NOT EXISTS `sharedperipherals` (
   `sub_type` varchar(30) NOT NULL DEFAULT '',
   `make` varchar(30) NOT NULL DEFAULT '',
   `model` varchar(30) DEFAULT NULL,
-  `quantity` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `quantity` int(11) DEFAULT NULL,
+  PRIMARY KEY (`sub_type`,`make`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sharedperipherals`
@@ -544,27 +411,28 @@ INSERT INTO `sharedperipherals` (`sub_type`, `make`, `model`, `quantity`) VALUES
 -- Table structure for table `stock`
 --
 
-CREATE TABLE `stock` (
+CREATE TABLE IF NOT EXISTS `stock` (
   `type` varchar(100) NOT NULL,
-  `quantity` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `quantity` int(11) DEFAULT NULL,
+  PRIMARY KEY (`type`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `stock`
 --
 
 INSERT INTO `stock` (`type`, `quantity`) VALUES
-('HDD', 127),
-('Keyboard', 332),
-('memory', 274),
-('Monitor', 147),
-('motherboard', 67),
-('Mouse', 300),
-('printer', 120),
-('processor', 162),
-('projector', 24),
-('server', 9),
-('xerox', 22);
+('HDD', 0),
+('Keyboard', 0),
+('memory', 0),
+('Monitor', 0),
+('motherboard', 0),
+('Mouse', 0),
+('printer', 0),
+('processor', 0),
+('projector', 0),
+('server', 0),
+('xerox', 0);
 
 -- --------------------------------------------------------
 
@@ -572,10 +440,11 @@ INSERT INTO `stock` (`type`, `quantity`) VALUES
 -- Table structure for table `systemadmin`
 --
 
-CREATE TABLE `systemadmin` (
+CREATE TABLE IF NOT EXISTS `systemadmin` (
   `id` varchar(50) NOT NULL,
-  `Lab_nos` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Lab_nos` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `systemadmin`
@@ -594,7 +463,7 @@ INSERT INTO `systemadmin` (`id`, `Lab_nos`) VALUES
 -- Table structure for table `systemsinalllabs`
 --
 
-CREATE TABLE `systemsinalllabs` (
+CREATE TABLE IF NOT EXISTS `systemsinalllabs` (
   `lab_name` varchar(20) DEFAULT NULL,
   `CPU_no` varchar(20) NOT NULL DEFAULT '',
   `MotherBoard` varchar(20) DEFAULT NULL,
@@ -605,8 +474,9 @@ CREATE TABLE `systemsinalllabs` (
   `IP_ADDR` varchar(20) DEFAULT NULL,
   `MAC_ADDR` varchar(20) DEFAULT NULL,
   `MT_no` varchar(20) NOT NULL DEFAULT '',
-  `MT_make` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `MT_make` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`CPU_no`,`MT_no`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `systemsinalllabs`
@@ -1191,7 +1061,7 @@ INSERT INTO `systemsinalllabs` (`lab_name`, `CPU_no`, `MotherBoard`, `model`, `p
 -- Table structure for table `systemsinfs6`
 --
 
-CREATE TABLE `systemsinfs6` (
+CREATE TABLE IF NOT EXISTS `systemsinfs6` (
   `sys_no` varchar(20) NOT NULL,
   `motherboard` varchar(20) DEFAULT NULL,
   `model` varchar(20) DEFAULT NULL,
@@ -1205,8 +1075,9 @@ CREATE TABLE `systemsinfs6` (
   `lab_name` varchar(20) NOT NULL,
   `socket` varchar(20) DEFAULT NULL,
   `keyboard` varchar(20) DEFAULT NULL,
-  `mouse` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `mouse` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`lab_name`,`sys_no`,`Monitor_no`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `systemsinfs6`
@@ -1786,7 +1657,7 @@ INSERT INTO `systemsinfs6` (`sys_no`, `motherboard`, `model`, `processer`, `memo
 -- Table structure for table `systemsinfs6parts`
 --
 
-CREATE TABLE `systemsinfs6parts` (
+CREATE TABLE IF NOT EXISTS `systemsinfs6parts` (
   `sys_no` varchar(20) NOT NULL,
   `motherboard` varchar(20) DEFAULT NULL,
   `processor` varchar(20) DEFAULT NULL,
@@ -1796,8 +1667,9 @@ CREATE TABLE `systemsinfs6parts` (
   `socket` varchar(20) DEFAULT NULL,
   `keyboard` varchar(20) DEFAULT NULL,
   `mouse` varchar(20) DEFAULT NULL,
-  `Monitor_make` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Monitor_make` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`sys_no`,`Monitor_no`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `systemsinfs6parts`
@@ -2371,140 +2243,6 @@ INSERT INTO `systemsinfs6parts` (`sys_no`, `motherboard`, `processor`, `memory`,
 ('PC:Lab:06', 'ASRock', '3.00GHz', '4GB', '500GB', 'PC:Lab:01', 'LGA 1151', 'Logitech', 'Logitech', 'ACER'),
 ('PC:Lab:07', 'ASRock', '3.00GHz', '4GB', '500GB', 'PC:Lab:07', 'LGA 1151', 'Logitech', 'Logitech', 'ACER');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `hdd`
---
-ALTER TABLE `hdd`
-  ADD PRIMARY KEY (`make`,`size`);
-
---
--- Indexes for table `login_table`
---
-ALTER TABLE `login_table`
-  ADD PRIMARY KEY (`email`),
-  ADD UNIQUE KEY `gmail_users_email_uindex` (`email`);
-
---
--- Indexes for table `mac_addr_mobo`
---
-ALTER TABLE `mac_addr_mobo`
-  ADD PRIMARY KEY (`mac_addr`);
-
---
--- Indexes for table `maintenance`
---
-ALTER TABLE `maintenance`
-  ADD PRIMARY KEY (`req_id`,`cpu_no`,`lab`);
-
---
--- Indexes for table `monitor`
---
-ALTER TABLE `monitor`
-  ADD PRIMARY KEY (`make`);
-
---
--- Indexes for table `motherboard`
---
-ALTER TABLE `motherboard`
-  ADD PRIMARY KEY (`make`,`model`);
-
---
--- Indexes for table `movement`
---
-ALTER TABLE `movement`
-  ADD PRIMARY KEY (`req_id`);
-
---
--- Indexes for table `peripherals`
---
-ALTER TABLE `peripherals`
-  ADD PRIMARY KEY (`sub_type`,`make`);
-
---
--- Indexes for table `personnel`
---
-ALTER TABLE `personnel`
-  ADD PRIMARY KEY (`pid`);
-
---
--- Indexes for table `processor`
---
-ALTER TABLE `processor`
-  ADD PRIMARY KEY (`make`,`frequency`);
-
---
--- Indexes for table `ram`
---
-ALTER TABLE `ram`
-  ADD PRIMARY KEY (`make`,`size`);
-
---
--- Indexes for table `request`
---
-ALTER TABLE `request`
-  ADD PRIMARY KEY (`req_id`);
-
---
--- Indexes for table `roles`
---
-ALTER TABLE `roles`
-  ADD PRIMARY KEY (`role`),
-  ADD UNIQUE KEY `roles_role_uindex` (`role`);
-
---
--- Indexes for table `sharedperipherals`
---
-ALTER TABLE `sharedperipherals`
-  ADD PRIMARY KEY (`sub_type`,`make`);
-
---
--- Indexes for table `stock`
---
-ALTER TABLE `stock`
-  ADD PRIMARY KEY (`type`);
-
---
--- Indexes for table `systemadmin`
---
-ALTER TABLE `systemadmin`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `systemsinalllabs`
---
-ALTER TABLE `systemsinalllabs`
-  ADD PRIMARY KEY (`CPU_no`,`MT_no`);
-
---
--- Indexes for table `systemsinfs6`
---
-ALTER TABLE `systemsinfs6`
-  ADD PRIMARY KEY (`lab_name`,`sys_no`,`Monitor_no`);
-
---
--- Indexes for table `systemsinfs6parts`
---
-ALTER TABLE `systemsinfs6parts`
-  ADD PRIMARY KEY (`sys_no`,`Monitor_no`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `movement`
---
-ALTER TABLE `movement`
-  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `request`
---
-ALTER TABLE `request`
-  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

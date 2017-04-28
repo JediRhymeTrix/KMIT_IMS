@@ -215,81 +215,86 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="closed_requests.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/closed_requests.html">
+      <file leaf-file-name="sysadmin_pending.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/sysadmin_pending.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            <state relative-caret-position="765">
+              <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+              <folding>
+                <marker date="1493372727597" expanded="true" signature="947:1003" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sysadmin_dashboard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/sysadmin_dashboard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="96" column="8" lean-forward="false" selection-start-line="96" selection-start-column="8" selection-end-line="97" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="labx.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/labx.html">
+      <file leaf-file-name="stockguy_closed.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/stockguy_closed.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="681">
+              <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <marker date="1493372546610" expanded="true" signature="718:774" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="laby.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/laby.html">
+      <file leaf-file-name="stockguy_pending.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/stockguy_pending.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="459">
+              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding>
+                <marker date="1493374910022" expanded="true" signature="1086:1142" ph="..." />
+                <marker date="1493374910022" expanded="true" signature="2557:2666" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maintenance.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/maintenance.html">
+      <file leaf-file-name="stockguy_dashboard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/stockguy_dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="630">
+              <caret line="105" column="8" lean-forward="false" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
+              <folding>
+                <marker date="1493374900601" expanded="true" signature="865:881" ph="..." />
+                <marker date="1493374900601" expanded="true" signature="1712:1730" ph="..." />
+                <marker date="1493374900601" expanded="true" signature="1764:1774" ph="..." />
+                <marker date="1493374900601" expanded="true" signature="1878:2015" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mgmnt_dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/mgmnt_dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pending_movement.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/pending_movement.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pending_requests.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/pending_requests.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stockguy_dashboard.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="stockguy_dashboard.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/stockguy_dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            <state relative-caret-position="944">
+              <caret line="109" column="17" lean-forward="false" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="17" />
+              <folding>
+                <element signature="e#1600#1606#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loader.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/loader.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -298,20 +303,28 @@
       <file leaf-file-name="sysadmin_dashboard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/sysadmin_dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding>
-                <element signature="n#style#0;n#h1#0;n#section#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="595">
+              <caret line="131" column="68" lean-forward="false" selection-start-line="131" selection-start-column="68" selection-end-line="131" selection-end-column="68" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sysadmin_parts.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/sysadmin_parts.html">
+      <file leaf-file-name="admin_dashboard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/admin_dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            <state relative-caret-position="459">
+              <caret line="108" column="8" lean-forward="true" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mgmnt_dashboard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/mgmnt_dashboard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-33">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -322,14 +335,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
+        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CP</find>
       <find>373</find>
       <find>600</find>
       <find>$change</find>
@@ -359,6 +372,7 @@
       <find>$cpu_</find>
       <find>next</find>
       <find>&lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;../favicon.ico&quot;&gt;</find>
+      <find>$('#mainContent').show(1000).slideDown();</find>
     </findStrings>
     <replaceStrings>
       <replace>data</replace>
@@ -382,20 +396,17 @@
       <replace>include 'config.php';</replace>
       <replace>include 'config.php';    //    connecting to database</replace>
       <replace>&lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;../favicon.ico?&quot;&gt;</replace>
+      <replace>$('#loader').hide();                 $('#mainContent').show(1000).slideDown();</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>C:\xampp\htdocs\gmail-style-clone-login-page-ajax-php\js</dir>
       <dir>C:\xampp\htdocs\gmail-style-clone-login-page-ajax-php\php</dir>
       <dir>C:\xampp\htdocs\gmail-style-clone-login-page-ajax-php\pages</dir>
+      <dir>C:\xampp\htdocs\gmail-style-clone-login-page-ajax-php\js</dir>
     </dirStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/stockguy_dashboard.js" />
-        <option value="$PROJECT_DIR$/js/mgmnt_dashboard.js" />
-        <option value="$PROJECT_DIR$/js/admin_dashboard.js" />
-        <option value="$PROJECT_DIR$/php/config.php" />
         <option value="$PROJECT_DIR$/php/admin_dashboard.php" />
         <option value="$PROJECT_DIR$/php/admin_movement.php" />
         <option value="$PROJECT_DIR$/php/maintenance.php" />
@@ -420,14 +431,7 @@
         <option value="$PROJECT_DIR$/php/submit_request.php" />
         <option value="$PROJECT_DIR$/js/sysadmin_lab.js" />
         <option value="$PROJECT_DIR$/php/checkAuthentication.php" />
-        <option value="$PROJECT_DIR$/js/sysadmin_dashboard.js" />
         <option value="$PROJECT_DIR$/js/validation.login.js" />
-        <option value="$PROJECT_DIR$/js/sysadmin_closed.js" />
-        <option value="$PROJECT_DIR$/js/sysadmin_active.js" />
-        <option value="$PROJECT_DIR$/js/sysadmin_pending.js" />
-        <option value="$PROJECT_DIR$/js/stockguy_active.js" />
-        <option value="$PROJECT_DIR$/js/stockguy_closed.js" />
-        <option value="$PROJECT_DIR$/js/stockguy_pending.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/pages/active_movement.html" />
         <option value="$PROJECT_DIR$/pages/active_requests.html" />
@@ -440,9 +444,20 @@
         <option value="$PROJECT_DIR$/pages/mgmnt_dashboard.html" />
         <option value="$PROJECT_DIR$/pages/pending_movement.html" />
         <option value="$PROJECT_DIR$/pages/pending_requests.html" />
-        <option value="$PROJECT_DIR$/pages/stockguy_dashboard.html" />
-        <option value="$PROJECT_DIR$/pages/sysadmin_dashboard.html" />
         <option value="$PROJECT_DIR$/pages/sysadmin_parts.html" />
+        <option value="$PROJECT_DIR$/css/loader.css" />
+        <option value="$PROJECT_DIR$/js/Sonic.js" />
+        <option value="$PROJECT_DIR$/js/sysadmin_dashboard.js" />
+        <option value="$PROJECT_DIR$/js/sysadmin_active.js" />
+        <option value="$PROJECT_DIR$/js/sysadmin_closed.js" />
+        <option value="$PROJECT_DIR$/js/stockguy_active.js" />
+        <option value="$PROJECT_DIR$/js/stockguy_closed.js" />
+        <option value="$PROJECT_DIR$/js/sysadmin_pending.js" />
+        <option value="$PROJECT_DIR$/js/stockguy_dashboard.js" />
+        <option value="$PROJECT_DIR$/js/stockguy_pending.js" />
+        <option value="$PROJECT_DIR$/pages/sysadmin_dashboard.html" />
+        <option value="$PROJECT_DIR$/pages/loader.html" />
+        <option value="$PROJECT_DIR$/pages/stockguy_dashboard.html" />
       </list>
     </option>
   </component>
@@ -471,8 +486,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -490,6 +507,34 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="gmail-style-clone-login-page-ajax-php">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="gmail-style-clone-login-page-ajax-php">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="php">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -560,34 +605,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="gmail-style-clone-login-page-ajax-php">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="gmail-style-clone-login-page-ajax-php">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="php">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -600,7 +617,7 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="FullScreen" value="true" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -729,16 +746,17 @@
       <workItem from="1491497645570" duration="1637000" />
       <workItem from="1491531672987" duration="1846000" />
       <workItem from="1491538387714" duration="2511000" />
-      <workItem from="1493291620909" duration="9427000" />
+      <workItem from="1493291620909" duration="10033000" />
+      <workItem from="1493368873735" duration="6493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330307000" />
+    <option name="totallyTimeSpent" value="337406000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16041666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -777,56 +795,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/php/movement_logs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <marker date="1493292114616" expanded="true" signature="554:576" ph="SELECT * fro... movement" />
-            <marker date="1493292114616" expanded="true" signature="746:802" ph="SELECT * fro... movement" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/output.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/parse_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/request_formatter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/restock.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding>
-            <marker date="1493292284741" expanded="true" signature="248:311" ph="update stock... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/session_killer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -911,7 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -938,7 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -978,9 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -993,7 +960,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,7 +972,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,9 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1024,11 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
           <caret line="123" column="54" lean-forward="false" selection-start-line="123" selection-start-column="54" selection-end-line="123" selection-end-column="54" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1493294899658" expanded="true" signature="3328:3344" ph="..." />
-            <marker date="1493294899658" expanded="true" signature="3570:3586" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1052,7 +1009,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,7 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1075,97 +1030,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/sysadmin_dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sysadmin_closed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="47" selection-end-column="45" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1493305152245" expanded="true" signature="1017:1073" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sysadmin_pending.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="42" column="45" lean-forward="false" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
-          <folding>
-            <marker date="1493305187670" expanded="true" signature="947:1003" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/stockguy_dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-          <folding>
-            <marker date="1491499091586" expanded="true" signature="865:881" ph="..." />
-            <marker date="1491499091586" expanded="true" signature="1712:1730" ph="..." />
-            <marker date="1491499091586" expanded="true" signature="1764:1774" ph="..." />
-            <marker date="1491499091586" expanded="true" signature="1878:2015" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sysadmin_active.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="45" lean-forward="false" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1493305184407" expanded="true" signature="989:1045" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/stockguy_pending.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="47" column="45" lean-forward="false" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
-          <folding>
-            <marker date="1493305260226" expanded="true" signature="1086:1142" ph="..." />
-            <marker date="1493305260226" expanded="true" signature="2557:2666" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/stockguy_closed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="45" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1493305214558" expanded="true" signature="718:774" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/stockguy_active.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="45" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1493305209635" expanded="true" signature="718:774" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="61" lean-forward="false" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1217,14 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/laby.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/maintenance.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1257,29 +1117,165 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/stockguy_dashboard.html">
+    <entry file="file://$PROJECT_DIR$/pages/sysadmin_parts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="85">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/loader.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/laby.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="79" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sonic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="365" column="0" lean-forward="false" selection-start-line="365" selection-start-column="0" selection-end-line="365" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sysadmin_active.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="61" column="16" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1493372535899" expanded="true" signature="989:1045" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sysadmin_closed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1493372539490" expanded="true" signature="1017:1073" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/stockguy_active.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="63" column="16" lean-forward="false" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1493372543180" expanded="true" signature="718:774" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/admin_dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="108" column="8" lean-forward="true" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mgmnt_dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sysadmin_pending.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+          <folding>
+            <marker date="1493372727597" expanded="true" signature="947:1003" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/stockguy_closed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="62" column="16" lean-forward="false" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1493372546610" expanded="true" signature="718:774" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/stockguy_pending.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <marker date="1493374910022" expanded="true" signature="1086:1142" ph="..." />
+            <marker date="1493374910022" expanded="true" signature="2557:2666" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/stockguy_dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="105" column="8" lean-forward="false" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
+          <folding>
+            <marker date="1493374900601" expanded="true" signature="865:881" ph="..." />
+            <marker date="1493374900601" expanded="true" signature="1712:1730" ph="..." />
+            <marker date="1493374900601" expanded="true" signature="1764:1774" ph="..." />
+            <marker date="1493374900601" expanded="true" signature="1878:2015" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sysadmin_dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="96" column="8" lean-forward="false" selection-start-line="96" selection-start-column="8" selection-end-line="97" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/sysadmin_dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#section#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="595">
+          <caret line="131" column="68" lean-forward="false" selection-start-line="131" selection-start-column="68" selection-end-line="131" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/sysadmin_parts.html">
+    <entry file="file://$PROJECT_DIR$/pages/loader.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        <state relative-caret-position="493">
+          <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/stockguy_dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="944">
+          <caret line="109" column="17" lean-forward="false" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="17" />
+          <folding>
+            <element signature="e#1600#1606#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
