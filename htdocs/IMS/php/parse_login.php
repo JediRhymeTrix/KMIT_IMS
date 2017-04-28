@@ -8,7 +8,7 @@
 
 session_start();
 
-$con = mysqli_connect('localhost', 'root', '', 'test');
+include 'config.php';    //    connecting to database
 
 if( isset($_SESSION['emp_id'], $_SESSION['role']) ) {
     // echo "emp_id = ".$_SESSION['emp_id']."<br>role = ".$_SESSION['role'];
@@ -21,6 +21,6 @@ if( isset($_SESSION['emp_id'], $_SESSION['role']) ) {
             break;
         case 'stockguy': header( 'Location: pages/stockguy_dashboard.html' ) ;
             break;
-        case 'mgmnt': header( 'Location: pages/mgmnt_dashboard.html' ) ;
+        case 'mgmnt': header( 'Location: pages/admin_dashboard.html' ) ;
     }
 }

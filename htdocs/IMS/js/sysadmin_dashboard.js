@@ -36,11 +36,21 @@ $(document).ready(function() {
                 var labs = data.lab_names.split(',');
 
                 labs.forEach(function (item) {
-                    $("#labs").append("<li><a class='lab' id='" + item + "' href='../pages/labx.html' data-target='#mainContent' data-bjax>" + item + "</a></li>");
+                    $("#labs").append("<li><a class='lab' id='" + item + "' href='#' >" + item + "</a></li>");
                 });
 
-                $('.lab').click(function () {
+                $('.lab').click(function (e) {
+
+                    e.preventDefault();
+
+                    $('#mainContent').load('../pages/labx.html');
+
                     var lab = $(this).attr('id');
+
+                    $('#req').show();
+                    $('#status').show();
+                    $('#stock li').empty();
+                    $('#selections').hide();
 
                     $('.lab').css({"color": "#929292"});
                     $('.link').css({"color": "#929292"});
@@ -82,7 +92,10 @@ $(document).ready(function() {
         e.preventDefault();
 
         $('#mainContent').hide();
-        $('#mainContent').show(1000).slideDown();
+        //$('#mainContent').show(1000).slideDown();
+
+        $('#loader').load("../pages/loader.html");
+        $('#loader').show();
 
         var stat = this.id;
         var task = $('#task_select').val();
@@ -130,7 +143,7 @@ $(document).ready(function() {
             //$('#logs_form').submit();
 
             $.ajax({
-                    url: "../php/movement_logs.php",
+                    url: "../php/request_logs.php",
                     type: "POST",
                     data: { logs_form: stats },
                     dataType: "JSON",
@@ -156,4 +169,7 @@ $(document).ready(function() {
     });
 });
 
+$(function() {
+    $(".sidebar").jScroll({speed : 0});
+});
 

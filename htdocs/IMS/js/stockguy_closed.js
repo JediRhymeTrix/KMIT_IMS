@@ -27,6 +27,10 @@ $(document).ready(function() {
 
             success: function (data) {
 
+                if(data.length == 0)
+                    $("#mainContent").append('<h2 id="nothing2see" align="center" style="vertical-align: 50%; color: darkgrey; padding-top: 50px;">Nothing to see here!</h2>');
+                else
+                    $("#nothing2see").hide();
 
                 $("#requests").empty();
                 console.log(data.length);
@@ -54,6 +58,9 @@ $(document).ready(function() {
 
                     c++;
                 });
+
+                $('#loader').hide();
+                $('#mainContent').show(1000).slideDown();
 
                 console.log(c);
 

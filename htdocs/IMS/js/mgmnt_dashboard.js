@@ -25,22 +25,23 @@ $(document).ready(function() {
     } else {
         $('.link').css({"color": "#929292"});
 
-        $.ajax({
-            url: "../php/mgmnt_dashboard.php",
-            type: "POST",
-            dataType: "JSON",
-            data: {action: 'test'},
+        var type;
 
-            success: function (data) {
+        $('.link').click(function(e) {
 
-                $('#username').text(data.name);
+            e.preventDefault();
 
-                var labs = data.lab_names;
+            $('.link').css({"color": "#929292"});
+            $(this).css({"color": "#ea7819"});
 
-                labs.forEach(function (item) {
-                    $("#from_lab").append("<option value='"+item+"'>"+item+"</option>");
-                    $("#to_lab").append("<option value='"+item+"'>"+item+"</option>");
-                });
+            $('#select').hide();
+            $('#logs_form').show(100);
+
+            type = this.id;
+        });
+
+        $('#task_select').on('change', function() {
+            if(this.value == "other") {
 
                 var now = new Date();
 
@@ -48,100 +49,43 @@ $(document).ready(function() {
                 var month = ("0" + (now.getMonth() + 1)).slice(-2);
 
                 var date = now.getFullYear()+"-"+(month)+"-"+(day) ;
-                var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
 
-                $('#due_date').attr('min', date);
-                $('#due_time').attr('min', time);
+                $("#custom_date").show();
+                $("#custom_date").attr('required');
 
+                $("#from_date").attr('max', date);
+                $("#from_date").attr('value', date);
+                $("#to_date").attr('max', date);
+                $("#to_date").attr('value', date);
 
-                $('#movement_form').submit(function(e) {
+            } else {
 
-                    if($('#from_lab').val() == $('#to_lab').val())
-                        alert('Please select different labs');
-                    else if($('#qty').val() == 0 && $('#qty_m').val() == 0)
-                        alert('Please select at least 1 system/monitor');
-                    else
-                    {
-                        $.ajax({
-                            url: "../php/mgmnt_movement.php",
-                            type: "POST",
-                            data: $("#movement_form").serialize().push('submit'),
-                            dataType: "JSON",
+                $("#custom_date").hide();
+                $("#custom_date").removeAttr('required');
 
-                            success: function (data) {
-
-                                alert('Movement initiated');
-
-                            },
-                            error: function () {
-
-                            }
-                        });
-                    }
-
-                    e.preventDefault();
-                });
-
-            },
-            error: function () {
-                $('#username').text('error');
-                alert("You are not logged in!")
-                window.location.href = "../index.html";
             }
         });
-    }
-
-    $('.link').click(function(e) {
-
-        e.preventDefault();
-
-        $('#mainContent').hide();
-        $('#mainContent').show(1000).slideDown();
-
-        var stat = this.id;
-
-        switch (stat) {
-            case 'pending': $('#mainContent').load('../pages/pending_movement.html');
-                break;
-            case 'active' : $('#mainContent').load('../pages/active_movement.html');
-                break;
-            case 'closed' : $('#mainContent').load('../pages/closed_movement.html');
-                break;
-        }
-    });
-
-    $('#logs_gen').click(function(e) {
-        e.preventDefault();
-
-        $('#status').hide();
-        $('#status_logs').show();
-        $('#logs_gen').hide();
-        $('#logs_sub').show();
 
         $('#logs_dl').click(function (e) {
             e.preventDefault();
 
-            var stats = [];
+            var vis = $('#custom_date').is(":visible");
+            if(vis) {
+                var start_date = $("#from_date").val();
+                var end_date = $("#to_date").val();
 
-            if ($('#chk_pending').is(":checked"))
-            {
-                stats.push($('#chk_pending').val());
-            }
-            if ($('#chk_active').is(":checked"))
-            {
-                stats.push($('#chk_active').val());
-            }
-            if ($('#chk_closed').is(":checked"))
-            {
-                stats.push($('#chk_closed').val());
-            }
+                var dates = [start_date, end_date];
+            } else {
 
-            //$('#logs_form').submit();
+                var end_date = $("#task_select option:selected").val();
+
+                var dates = [end_date];
+            }
 
             $.ajax({
-                url: "../php/movement_logs.php",
+                url: "../php/mgmnt_logs.php",
                 type: "POST",
-                data: { logs_form: stats },
+                data: { type: type, time: dates },
                 dataType: "JSON",
 
                 success: function (data) {
@@ -150,19 +94,17 @@ $(document).ready(function() {
                         .attr('action', data.file)
                         .appendTo('body').submit().remove();
 
-                    $('#status').show();
-                    $('#status_logs').hide();
-                    $('#logs_gen').show();
-                    $('#logs_sub').hide();
-
                 },
                 error: function () {
-                    alert('Please select the required items.');
+                    alert('Error generating logs. Please try again.');
                 }
             });
-        })
+        });
+    }
 
-    });
 });
 
 
+$(function() {
+    $(".sidebar").jScroll({speed : 0});
+});

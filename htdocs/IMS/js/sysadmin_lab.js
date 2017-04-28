@@ -55,7 +55,7 @@ $(document).ready(function() {
                             $('.parts').find(':last-child').remove();
                         });
 
-                        var parts_html = "<form id='parts_list'><fieldset id='parts_fs'><input type='text' name='cpu_no' value='"+cpu_no+"' hidden></fieldset></form> ";
+                        var parts_html = "<form id='parts_list'><fieldset id='parts_fs'><input type='text' name='cpu_no' id='sel_cpu' value='"+cpu_no+"' hidden></fieldset></form> ";
 
                         $(div_id).append(parts_html);
 
@@ -68,56 +68,72 @@ $(document).ready(function() {
                         $('#parts_list').on('submit',function(e) {
                             e.preventDefault();
 
+                            $('#status').hide();
+                            $('#req').hide();
                             $('#selections').show();
 
-                            $.ajax({
-                                url: "../php/submit_request.php",
-                                type: "POST",
-                                data: new FormData(this),
-                                contentType: false,
-                                cache: false,
-                                dataType: "JSON",
-                                processData: false,
-                                success: function (data) {
+                            var sysno = $('#sel_cpu').val();
+                            //alert(sysno);
 
-                                    if(data.size == 1)
-                                        $("#stock").append("<li class='link' id='" + cpu_no + "' style='font-size: small'>CPU#" + cpu_no + " - " + data.size + " part</li>");
-                                    else if(data.size > 1)
-                                        $("#stock").append("<li class='link' id='" + cpu_no + "' style='font-size: small'>CPU#" + cpu_no + " - " + data.size + " parts</li>");
-                                    else {}
+                            if(localStorage.getItem('lb') != sysno) {
 
-                                    $('#button').click(function() {
-                                        var alerted = localStorage.getItem('alerted') || '';
-                                        if (alerted != 'yes') {
-                                            alert("Request Submitted");
-                                            localStorage.setItem('alerted','yes');
+                                localStorage.setItem('lb', sysno);
+
+
+                                $.ajax({
+                                    url: "../php/submit_request.php",
+                                    type: "POST",
+                                    data: new FormData(this),
+                                    contentType: false,
+                                    cache: false,
+                                    dataType: "JSON",
+                                    processData: false,
+                                    success: function (data) {
+
+                                        if (data.size == 1)
+                                            $("#stock").append("<li class='link' id='" + cpu_no + "' style='font-size: small'>CPU#" + cpu_no + " - " + data.size + " part</li>");
+                                        else if (data.size > 1)
+                                            $("#stock").append("<li class='link' id='" + cpu_no + "' style='font-size: small'>CPU#" + cpu_no + " - " + data.size + " parts</li>");
+                                        else {
                                         }
 
-                                        $('#stock li').empty();
-                                        $('#selections').hide();
+                                        $('#button').click(function () {
+                                            var alerted = localStorage.getItem('alerted') || '';
+                                            if (alerted != 'yes') {
+                                                alert("Request Submitted");
+                                                localStorage.setItem('alerted', 'yes');
+                                            }
+
+                                            $('#stock li').empty();
+                                            $('#selections').hide();
+                                            $('#req').show();
+                                            $('#status').show();
 
                                             $.ajax({
                                                 url: "../php/submit_request.php",
                                                 type: "POST",
                                                 data: 'submit',
                                                 dataType: "JSON",
-                                                success: function(data) {
+                                                success: function (data) {
 
-                                                    console.log("request submitted");
+                                                    //console.log("request submitted");
 
                                                 },
-                                                error: function() {
+                                                error: function () {
 
-                                                   console.log('request failed');
+                                                    //console.log('request failed');
+
+                                                    localStorage.setItem('alerted', '');
 
                                                 }
                                             });
-                                    });
-                                },
-                                error: function (xhr, status, error) {
-                                    alert(xhr.responseText);
-                                }
-                            });
+                                        });
+                                    },
+                                    error: function (xhr, status, error) {
+                                        alert(xhr.responseText);
+                                    }
+                                });
+                            }
 
                         });
 

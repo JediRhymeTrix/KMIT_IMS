@@ -10,7 +10,7 @@
 
 session_start();
 
-$con = mysqli_connect('localhost', 'root', '', 'test');
+include 'config.php';    //    connecting to database
 
 if(isset($_POST['email'])&&(isset($_POST['password']))){
 
@@ -32,11 +32,13 @@ if(isset($_POST['email'])&&(isset($_POST['password']))){
 
             switch( $role )
             {
-                case 'sysadmin': $loc = 'pages/sysadmin_dashboard.html';
+                case 'sysadmin': $loc = 'pages/sysadmin_dashboard';
                     break;
-                case 'stockguy': $loc = 'pages/stockguy_dashboard.html';
+                case 'stockguy': $loc = 'pages/stockguy_dashboard';
                     break;
-                case 'mgmnt': $loc = 'pages/mgmnt_dashboard.html';
+                case 'mgmnt': $loc = 'pages/mgmnt_dashboard';
+                    break;
+                case 'admin': $loc = 'pages/admin_dashboard';
                     break;
                 default: $loc="index.html";
                     break;

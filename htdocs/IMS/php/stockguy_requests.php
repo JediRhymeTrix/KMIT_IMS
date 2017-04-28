@@ -6,11 +6,10 @@
  * Time: 2:06 AM
  */
 
-include "request_formatter.php";
-
 session_start();
 
-$con = mysqli_connect('localhost', 'root', '', 'test');
+include 'config.php';    //    connecting to database
+include "request_formatter.php";
 
 if(isset($_POST['status']) || isset($_POST['status1'])) {
     $status = $_POST['status'];
@@ -133,4 +132,15 @@ if (isset($_POST['active_id'])) {
 else {
     $myfile = fopen("testfile.txt", "w");
     fwrite($myfile, 'status error');
+}
+
+if(isset($_POST['last'])) {
+    $last = $_POST['last'];
+
+    $query = mysqli_query($con,"select max(req_id) from request where status='pending'");
+    $rid = mysqli_fetch_row($query)[0];
+
+    if($rid > $last) {
+        echo json_encode($rid." > ".$last);
+    }
 }

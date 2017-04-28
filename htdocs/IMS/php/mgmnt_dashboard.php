@@ -2,15 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: jrt
- * Date: 04-Feb-17
- * Time: 4:41 PM
+ * Date: 26-Mar-17
+ * Time: 1:01 PM
  */
 
 //include('config.php');
 
 session_start();
 
-$con = mysqli_connect('localhost', 'root', '', 'test');
+include 'config.php';    //    connecting to database
 
 if(isset($_SESSION['emp_id'])){
 
@@ -24,18 +24,11 @@ if(isset($_SESSION['emp_id'])){
 
         $result = mysqli_fetch_array($query,MYSQLI_ASSOC);
 
-        $query = mysqli_query($con,"select DISTINCT lab_name from systemsinfs6");
-        $lab_names = [];
-
-        while ($res = mysqli_fetch_array($query)) {
-            array_push($lab_names, $res['lab_name']);
-        }
-
         $name = $result['pname'];
 
         if(isset($_POST['action'])) {
 
-            echo json_encode(array('name'=>$name,'lab_names'=>$lab_names));
+            echo json_encode(array('name'=>$name));
 
             $myfile = fopen("testfile.txt", "w");
             fwrite($myfile, 'response sent');

@@ -8,7 +8,7 @@
 
 session_start();
 
-$con = mysqli_connect('localhost', 'root', '', 'test');
+include 'config.php';    //    connecting to database
 
 if(isset($_POST['status']) || isset($_POST['status1'])) {
     $status = $_POST['status'];

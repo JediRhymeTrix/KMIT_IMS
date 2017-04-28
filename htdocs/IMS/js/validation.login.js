@@ -26,6 +26,8 @@ $(".next").click(function() {
             if (result == 1) {
                 next_fs = current_fs.next();
                 animate(next_fs);
+
+                $('#password').focus();
             }
         });
     }

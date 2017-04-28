@@ -8,7 +8,7 @@
 
 session_start();
 
-$con = mysqli_connect('localhost', 'root', '', 'test');
+include 'config.php';    //    connecting to database
 
 $myfile = fopen("testfile.txt", "w");
 fwrite($myfile, $_POST['req_id']);

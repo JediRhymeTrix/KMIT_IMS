@@ -6,7 +6,7 @@
  * Time: 12:31 PM
  */
 
-$con = mysqli_connect('localhost', 'root', '', 'test');
+include 'config.php';    //    connecting to database
 
 
 for( $i = 0 ; $i < 505 ; $i++ ) {
