@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql312.byethost15.com
--- Generation Time: Apr 28, 2017 at 06:49 AM
+-- Generation Time: Apr 29, 2017 at 04:56 AM
 -- Server version: 5.6.35-81.0
 -- PHP Version: 5.3.3
 
@@ -169,6 +169,13 @@ CREATE TABLE IF NOT EXISTS `maintenance` (
   `status` varchar(20) NOT NULL DEFAULT 'pending',
   PRIMARY KEY (`req_id`,`cpu_no`,`lab`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `maintenance`
+--
+
+INSERT INTO `maintenance` (`req_id`, `lab`, `cpu_no`, `parts`, `installed`, `status`) VALUES
+(1, 'FS6', '258', 'motherboard', '0', 'pending');
 
 -- --------------------------------------------------------
 
@@ -355,7 +362,14 @@ CREATE TABLE IF NOT EXISTS `request` (
   `allotted` varchar(20) DEFAULT NULL,
   `pending` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`req_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `request`
+--
+
+INSERT INTO `request` (`req_id`, `req_date`, `req_time`, `lab_name`, `parts_inrepair`, `quantity`, `status`, `allotted`, `pending`) VALUES
+(0, '2017-04-29', '13:34:59', 'FS6', 'sample_item', '1', 'pending', '0', '1');
 
 -- --------------------------------------------------------
 

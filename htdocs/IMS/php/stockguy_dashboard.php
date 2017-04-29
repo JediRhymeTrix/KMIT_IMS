@@ -6,11 +6,9 @@
  * Time: 4:41 PM
  */
 
-//include('config.php');
+include('config.php');
 
 session_start();
-
-$con = mysqli_connect('localhost', 'root', '', 'test');
 
 if(isset($_SESSION['emp_id'])){
 
