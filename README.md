@@ -2,6 +2,8 @@
 -- an Inventory management System for KMIT.
 
 Note: New live version hosted at: http://kmit-ims.byethost15.com
+
+Project workflow map: https://www.mindmeister.com/827876181?t=D66hwsjvYV
  
 TESTING INSTRUCTIONS:
 
